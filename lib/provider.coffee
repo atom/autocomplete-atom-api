@@ -7,15 +7,14 @@ module.exports =
   selector: '.source.coffee, .source.js'
   id: 'autocomplete-atom-api-atomapiprovider'
 
-  constructor: ->
-    @completions = {}
-
   requestHandler: ({cursor, editor, prefix}) ->
     completions = []
     line = editor.lineTextForBufferRow(cursor.getBufferRow())
     @getCompletions(line)
 
   loadCompletions: ->
+    @completions ?= {}
+
     fs.readFile path.resolve(__dirname, '..', 'completions.json'), (error, content) =>
       return if error?
 
