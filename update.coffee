@@ -27,12 +27,16 @@ request requestOptions, (error, response, release) ->
     url: apiAsset.browser_download_url
 
   request apiRequestOptions, (error, response, atomApi) ->
+    if error?
+      console.error(error.message)
+      return process.exit(1)
+
     {classes} = atomApi
 
     publicClasses = {}
     for name, {instanceProperties, instanceMethods} of classes
-      properties = instanceProperties.filter(isVisible).map ({name}) -> name
-      methods = instanceMethods.filter(isVisible).map ({name}) -> name
+      properties = instanceProperties.filter(isVisible).map(pluckName).sort()
+      methods = instanceMethods.filter(isVisible).map(pluckName).sort()
 
       if properties?.length > 0 or methods.length > 0
         publicClasses[name] = {properties, methods}
@@ -41,3 +45,5 @@ request requestOptions, (error, response, release) ->
 
 isVisible = ({visibility}) ->
   visibility in ['Essential', 'Extended', 'Public']
+
+pluckName = ({name}) -> name
