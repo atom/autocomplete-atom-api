@@ -45,6 +45,13 @@ describe "Atom API autocompletions", ->
     expect(getCompletions()[0].word).toBe 'clipboard'
     expect(getCompletions()[0].prefix).toBe ''
 
+    editor.setText('var c = atom.')
+    editor.setCursorBufferPosition([0, Infinity])
+
+    expect(getCompletions().length).toBe 45
+    expect(getCompletions()[0].word).toBe 'clipboard'
+    expect(getCompletions()[0].prefix).toBe ''
+
     editor.setText('atom.co')
     editor.setCursorBufferPosition([0, Infinity])
     expect(getCompletions().length).toBe 4

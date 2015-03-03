@@ -1,7 +1,7 @@
 fs = require 'fs'
 path = require 'path'
 
-propertyPrefixPattern = /(?:^|\[|\(|,|=|:)\s*atom\.(?:[a-zA-Z]+\.?){0,2}$/
+propertyPrefixPattern = /(?:^|\[|\(|,|=|:|\s)\s*(atom\.(?:[a-zA-Z]+\.?){0,2})$/
 
 module.exports =
   selector: '.source.coffee, .source.js'
@@ -44,7 +44,7 @@ module.exports =
 
   getCompletions: (line) ->
     completions = []
-    match =  propertyPrefixPattern.exec(line)?[0]
+    match =  propertyPrefixPattern.exec(line)?[1]
     return completions unless match
 
     segments = match.split('.')
