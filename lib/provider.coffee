@@ -15,19 +15,16 @@ module.exports =
 
   load: ->
     @loadCompletions()
-    @watchAtomPackageDirectories()
+    atom.project.onDidChangePaths => @scanDirectoriesForAtomPackages()
+    @scanDirectoriesForAtomPackages()
 
-  watchAtomPackageDirectories: ->
-    scanDirectoriesForAtomPackages = =>
-      @packageDirectories = []
-      atom.project.getDirectories().forEach (directory) =>
-        fs.readFile path.join(directory.getPath(), 'package.json'), (error, contents) =>
-          try
-            if JSON.parse(contents)?.engines?.atom
-              @packageDirectories.push(directory)
-
-    atom.project.onDidChangePaths(scanDirectoriesForAtomPackages)
-    scanDirectoriesForAtomPackages()
+  scanDirectoriesForAtomPackages: ->
+    @packageDirectories = []
+    atom.project.getDirectories().forEach (directory) =>
+      fs.readFile path.join(directory.getPath(), 'package.json'), (error, contents) =>
+        try
+          if JSON.parse(contents)?.engines?.atom
+            @packageDirectories.push(directory)
 
   loadCompletions: ->
     @completions ?= {}
@@ -62,9 +59,6 @@ module.exports =
       completions.push({word: completion.name, label: completion.type, prefix})
 
     completions
-
-  isVisible: (visibility) ->
-    visibility in ['Essential', 'Extended', 'Public']
 
   getPropertyClass: (name) ->
     atom[name]?.constructor?.name
