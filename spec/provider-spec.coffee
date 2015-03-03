@@ -71,6 +71,12 @@ describe "Atom API autocompletions", ->
     expect(getCompletions()[0].word).toBe 'commands'
     expect(getCompletions()[0].prefix).toBe 'commands'
 
+    editor.setText('atom.commands ')
+    editor.setCursorBufferPosition([0, 13])
+    expect(getCompletions().length).toBe 1
+    expect(getCompletions()[0].word).toBe 'commands'
+    expect(getCompletions()[0].prefix).toBe 'commands'
+
   it "includes methods on atom global properties", ->
     editor.setText('atom.clipboard.')
     editor.setCursorBufferPosition([0, Infinity])

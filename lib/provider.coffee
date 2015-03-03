@@ -10,7 +10,7 @@ module.exports =
   requestHandler: ({cursor, editor}) ->
     return [] unless @isEditingAnAtomPackageFile(editor)
 
-    line = editor.lineTextForBufferRow(cursor.getBufferRow())
+    line = editor.getTextInRange([[cursor.getBufferRow(), 0], cursor.getBufferPosition()])
     @getCompletions(line)
 
   load: ->
