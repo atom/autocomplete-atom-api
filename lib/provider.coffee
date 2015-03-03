@@ -38,9 +38,6 @@ module.exports =
       return
 
   isEditingAnAtomPackageFile: (editor) ->
-    unless editor.getGrammar().scopeName in ['source.coffee', 'source.js']
-      return false
-
     for directory in @packageDirectories ? []
       return true if directory.contains(editor.getPath())
     false
