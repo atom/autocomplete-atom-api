@@ -66,7 +66,8 @@ module.exports =
     segments = segments.filter (segment) -> segment
     property = segments[segments.length - 1]
     propertyCompletions = @completions[property]?.completions ? []
-    for completion in propertyCompletions when completion.name.indexOf(prefix) is 0
+    lowerCasePrefix = prefix.toLowerCase()
+    for completion in propertyCompletions when completion.name.indexOf(lowerCasePrefix) is 0
       completions.push({word: completion.name, label: completion.type, prefix})
 
     completions
