@@ -15,10 +15,10 @@ module.exports =
 
   load: ->
     @loadCompletions()
-    atom.project.onDidChangePaths => @scanDirectoriesForAtomPackages()
-    @scanDirectoriesForAtomPackages()
+    atom.project.onDidChangePaths => @scanProjectDirectoriesForAtomPackages()
+    @scanProjectDirectoriesForAtomPackages()
 
-  scanDirectoriesForAtomPackages: ->
+  scanProjectDirectoriesForAtomPackages: ->
     @packageDirectories = []
     atom.project.getDirectories().forEach (directory) =>
       fs.readFile path.join(directory.getPath(), 'package.json'), (error, contents) =>
