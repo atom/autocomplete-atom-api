@@ -15,16 +15,30 @@ module.exports =
 
   load: ->
     @loadCompletions()
-    atom.project.onDidChangePaths => @scanProjectDirectoriesForAtomPackages()
-    @scanProjectDirectoriesForAtomPackages()
+    atom.project.onDidChangePaths => @scanProjectDirectories()
+    @scanProjectDirectories()
 
-  scanProjectDirectoriesForAtomPackages: ->
+  scanProjectDirectories: ->
     @packageDirectories = []
     atom.project.getDirectories().forEach (directory) =>
-      fs.readFile path.join(directory.getPath(), 'package.json'), (error, contents) =>
+      @readMetadata directory, (error, metadata) =>
+        if @isAtomPackage(metadata) or @isAtomCore(metadata)
+          @packageDirectories.push(directory)
+
+  readMetadata: (directory, callback) ->
+    fs.readFile path.join(directory.getPath(), 'package.json'), (error, contents) ->
+      unless error?
         try
-          if JSON.parse(contents)?.engines?.atom
-            @packageDirectories.push(directory)
+          metadata = JSON.parse(contents)
+        catch parseError
+          error = parseError
+      callback(error, metadata)
+
+  isAtomPackage: (metadata) ->
+    metadata?.engines?.atom?.length > 0
+
+  isAtomCore: (metadata)->
+    metadata?.name is 'atom'
 
   loadCompletions: ->
     @completions ?= {}

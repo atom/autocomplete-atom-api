@@ -24,13 +24,14 @@ describe "Atom API autocompletions", ->
     waitsForPromise -> atom.workspace.open('test.js')
     runs -> editor = atom.workspace.getActiveTextEditor()
 
-  it "only includes completions in files that are in an Atom package", ->
+  it "only includes completions in files that are in an Atom package or Atom core", ->
     emptyProjectPath = temp.mkdirSync('atom-project-')
     atom.project.setPaths([emptyProjectPath])
 
     waitsForPromise -> atom.workspace.open('empty.js')
 
     runs ->
+      expect(provider.packageDirectories.length).toBe 0
       editor = atom.workspace.getActiveTextEditor()
       editor.setText('atom.')
       editor.setCursorBufferPosition([0, Infinity])
