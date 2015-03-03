@@ -1,6 +1,6 @@
 provider = require './provider'
 
 module.exports =
-  activate: -> provider.loadCompletions()
+  activate: -> provider.load()
 
   getProvider: -> providers: [provider]

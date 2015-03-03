@@ -7,10 +7,27 @@ module.exports =
   selector: '.source.coffee, .source.js'
   id: 'autocomplete-atom-api-atomapiprovider'
 
-  requestHandler: ({cursor, editor, prefix}) ->
-    completions = []
+  requestHandler: ({cursor, editor}) ->
+    return [] unless @isEditingAnAtomPackageFile(editor)
+
     line = editor.lineTextForBufferRow(cursor.getBufferRow())
     @getCompletions(line)
+
+  load: ->
+    @loadCompletions()
+    @watchAtomPackageDirectories()
+
+  watchAtomPackageDirectories: ->
+    scanDirectoriesForAtomPackages = =>
+      @packageDirectories = []
+      atom.project.getDirectories().forEach (directory) =>
+        fs.readFile path.join(directory.getPath(), 'package.json'), (error, contents) =>
+          try
+            if JSON.parse(contents)?.engines?.atom
+              @packageDirectories.push(directory)
+
+    atom.project.onDidChangePaths(scanDirectoriesForAtomPackages)
+    scanDirectoriesForAtomPackages()
 
   loadCompletions: ->
     @completions ?= {}
@@ -22,6 +39,14 @@ module.exports =
       classes = JSON.parse(content)
       @loadProperty('atom', 'Atom', classes)
       return
+
+  isEditingAnAtomPackageFile: (editor) ->
+    unless editor.getGrammar().scopeName in ['source.coffee', 'source.js']
+      return false
+
+    for directory in @packageDirectories ? []
+      return true if directory.contains(editor.getPath())
+    false
 
   getCompletions: (line) ->
     completions = []

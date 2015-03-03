@@ -1,3 +1,5 @@
+temp = require 'temp'
+
 describe "Atom API autocompletions", ->
   [editor, provider] = []
 
@@ -15,11 +17,36 @@ describe "Atom API autocompletions", ->
 
   beforeEach ->
     waitsForPromise -> atom.packages.activatePackage('autocomplete-atom-api')
+    waitsForPromise -> atom.packages.activatePackage('language-javascript')
     runs ->
       [provider] = atom.packages.getActivePackage('autocomplete-atom-api').mainModule.getProvider().providers
     waitsFor -> Object.keys(provider.completions).length > 0
-    waitsForPromise -> atom.workspace.open('test.html')
+    waitsFor -> provider.packageDirectories?.length > 0
+    waitsForPromise -> atom.workspace.open('test.js')
     runs -> editor = atom.workspace.getActiveTextEditor()
+
+  it "only includes completions in files that are in an Atom package", ->
+    emptyProjectPath = temp.mkdirSync('atom-project-')
+    atom.project.setPaths([emptyProjectPath])
+
+    waitsForPromise -> atom.workspace.open('empty.js')
+
+    runs ->
+      editor = atom.workspace.getActiveTextEditor()
+      editor.setText('atom.')
+      editor.setCursorBufferPosition([0, Infinity])
+
+      expect(getCompletions().length).toBe 0
+
+  it "only includes completions in JavaScript and CoffeeScript files", ->
+    waitsForPromise -> atom.workspace.open('test.txt')
+
+    runs ->
+      editor = atom.workspace.getActiveTextEditor()
+      editor.setText('atom.')
+      editor.setCursorBufferPosition([0, Infinity])
+
+      expect(getCompletions().length).toBe 0
 
   it "includes properties and functions on the atom global", ->
     editor.setText('atom.')
