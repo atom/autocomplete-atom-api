@@ -7,10 +7,10 @@ module.exports =
   selector: '.source.coffee, .source.js'
   id: 'autocomplete-atom-api-atomapiprovider'
 
-  requestHandler: ({cursor, editor}) ->
+  requestHandler: ({position, editor}) ->
     return [] unless @isEditingAnAtomPackageFile(editor)
 
-    line = editor.getTextInRange([[cursor.getBufferRow(), 0], cursor.getBufferPosition()])
+    line = editor.getTextInRange([[position.row, 0], position])
     @getCompletions(line)
 
   load: ->

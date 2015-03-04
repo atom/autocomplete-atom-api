@@ -10,7 +10,7 @@ describe "Atom API autocompletions", ->
     prefix = editor.getTextInRange([start, end])
     request =
       editor: editor
-      cursor: cursor
+      position: end
       scope: cursor.getScopeDescriptor()
       prefix: prefix
     provider.requestHandler(request)
