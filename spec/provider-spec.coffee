@@ -13,7 +13,7 @@ describe "Atom API autocompletions", ->
       position: end
       scope: cursor.getScopeDescriptor()
       prefix: prefix
-    provider.requestHandler(request)
+    provider.getSuggestions(request)
 
   beforeEach ->
     waitsForPromise -> atom.packages.activatePackage('autocomplete-atom-api')

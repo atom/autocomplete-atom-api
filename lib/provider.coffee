@@ -5,12 +5,11 @@ propertyPrefixPattern = /(?:^|\[|\(|,|=|:|\s)\s*(atom\.(?:[a-zA-Z]+\.?){0,2})$/
 
 module.exports =
   selector: '.source.coffee, .source.js'
-  id: 'autocomplete-atom-api-atomapiprovider'
 
-  requestHandler: ({position, editor}) ->
+  getSuggestions: ({bufferPosition, editor}) ->
     return [] unless @isEditingAnAtomPackageFile(editor)
 
-    line = editor.getTextInRange([[position.row, 0], position])
+    line = editor.getTextInRange([[bufferPosition.row, 0], bufferPosition])
     @getCompletions(line)
 
   load: ->
