@@ -67,7 +67,7 @@ module.exports =
     propertyCompletions = @completions[property]?.completions ? []
     lowerCasePrefix = prefix.toLowerCase()
     for completion in propertyCompletions when completion.name.indexOf(lowerCasePrefix) is 0
-      completions.push({word: completion.name, label: completion.type, prefix})
+      completions.push({text: completion.name, rightLabel: completion.type, replacementPrefix: prefix})
 
     completions
 
