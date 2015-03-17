@@ -10,15 +10,15 @@ describe "Atom API autocompletions", ->
     prefix = editor.getTextInRange([start, end])
     request =
       editor: editor
-      position: end
-      scope: cursor.getScopeDescriptor()
+      bufferPosition: end
+      scopeDescriptor: cursor.getScopeDescriptor()
       prefix: prefix
-    provider.requestHandler(request)
+    provider.getSuggestions(request)
 
   beforeEach ->
     waitsForPromise -> atom.packages.activatePackage('autocomplete-atom-api')
     runs ->
-      [provider] = atom.packages.getActivePackage('autocomplete-atom-api').mainModule.getProvider().providers
+      provider = atom.packages.getActivePackage('autocomplete-atom-api').mainModule.getProvider()
     waitsFor -> Object.keys(provider.completions).length > 0
     waitsFor -> provider.packageDirectories?.length > 0
     waitsForPromise -> atom.workspace.open('test.js')
