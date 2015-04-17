@@ -44,62 +44,48 @@ describe "Atom API autocompletions", ->
 
     expect(getCompletions().length).toBe 45
     expect(getCompletions()[0].text).toBe 'clipboard'
-    expect(getCompletions()[0].replacementPrefix).toBe ''
 
     editor.setText('var c = atom.')
     editor.setCursorBufferPosition([0, Infinity])
 
     expect(getCompletions().length).toBe 45
     expect(getCompletions()[0].text).toBe 'clipboard'
-    expect(getCompletions()[0].replacementPrefix).toBe ''
 
     editor.setText('atom.co')
     editor.setCursorBufferPosition([0, Infinity])
     expect(getCompletions().length).toBe 4
     expect(getCompletions()[0].text).toBe 'commands'
-    expect(getCompletions()[0].replacementPrefix).toBe 'co'
     expect(getCompletions()[1].text).toBe 'config'
-    expect(getCompletions()[1].replacementPrefix).toBe 'co'
     expect(getCompletions()[2].text).toBe 'contextMenu'
-    expect(getCompletions()[2].replacementPrefix).toBe 'co'
-    expect(getCompletions()[3].text).toBe 'confirm'
-    expect(getCompletions()[3].replacementPrefix).toBe 'co'
+    expect(getCompletions()[3].snippet).toBe 'confirm(${1:options})'
 
     editor.setText('atom.commands')
     editor.setCursorBufferPosition([0, Infinity])
     expect(getCompletions().length).toBe 1
     expect(getCompletions()[0].text).toBe 'commands'
-    expect(getCompletions()[0].replacementPrefix).toBe 'commands'
 
     editor.setText('atom.Command')
     editor.setCursorBufferPosition([0, Infinity])
     expect(getCompletions().length).toBe 1
     expect(getCompletions()[0].text).toBe 'commands'
-    expect(getCompletions()[0].replacementPrefix).toBe 'Command'
 
     editor.setText('atom.commands ')
     editor.setCursorBufferPosition([0, 13])
     expect(getCompletions().length).toBe 1
     expect(getCompletions()[0].text).toBe 'commands'
-    expect(getCompletions()[0].replacementPrefix).toBe 'commands'
 
   it "includes methods on atom global properties", ->
     editor.setText('atom.clipboard.')
     editor.setCursorBufferPosition([0, Infinity])
 
     expect(getCompletions().length).toBe 3
-    expect(getCompletions()[0].text).toBe 'read'
-    expect(getCompletions()[0].replacementPrefix).toBe ''
-    expect(getCompletions()[1].text).toBe 'readWithMetadata'
-    expect(getCompletions()[1].replacementPrefix).toBe ''
-    expect(getCompletions()[2].text).toBe 'write'
-    expect(getCompletions()[2].replacementPrefix).toBe ''
+    expect(getCompletions()[0].text).toBe 'read()'
+    expect(getCompletions()[1].text).toBe 'readWithMetadata()'
+    expect(getCompletions()[2].snippet).toBe 'write(${1:text}, ${2:metadata})'
 
     editor.setText('atom.clipboard.rea')
     editor.setCursorBufferPosition([0, Infinity])
 
     expect(getCompletions().length).toBe 2
-    expect(getCompletions()[0].text).toBe 'read'
-    expect(getCompletions()[0].replacementPrefix).toBe 'rea'
-    expect(getCompletions()[1].text).toBe 'readWithMetadata'
-    expect(getCompletions()[1].replacementPrefix).toBe 'rea'
+    expect(getCompletions()[0].text).toBe 'read()'
+    expect(getCompletions()[1].text).toBe 'readWithMetadata()'

@@ -67,7 +67,7 @@ module.exports =
     propertyCompletions = @completions[property]?.completions ? []
     lowerCasePrefix = prefix.toLowerCase()
     for completion in propertyCompletions when completion.name.indexOf(lowerCasePrefix) is 0
-      completions.push({text: completion.name, rightLabel: completion.type, replacementPrefix: prefix})
+      completions.push(completion)
 
     completions
 
@@ -75,15 +75,13 @@ module.exports =
     atom[name]?.constructor?.name
 
   loadProperty: (propertyName, className, classes, parent) ->
-    classDetails = classes[className]
-    return unless classDetails?
+    classCompletions = classes[className]
+    return unless classCompletions?
 
     @completions[propertyName] = completions: []
 
-    for name in classDetails?.properties
-      @completions[propertyName].completions.push({name: name, type: 'property'})
-      propertyClass = @getPropertyClass(name)
-      @loadProperty(name, propertyClass, classes)
-
-    for name in classDetails?.methods
-      @completions[propertyName].completions.push({name, type: 'method'})
+    for completion in classCompletions
+      @completions[propertyName].completions.push(completion)
+      if completion.type is 'property'
+        propertyClass = @getPropertyClass(completion.name)
+        @loadProperty(completion.name, propertyClass, classes)
