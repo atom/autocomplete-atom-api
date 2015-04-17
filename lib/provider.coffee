@@ -67,8 +67,7 @@ module.exports =
     propertyCompletions = @completions[property]?.completions ? []
     lowerCasePrefix = prefix.toLowerCase()
     for completion in propertyCompletions when completion.name.indexOf(lowerCasePrefix) is 0
-      completions.push(completion)
-
+      completions.push(clone(completion))
     completions
 
   getPropertyClass: (name) ->
@@ -85,3 +84,8 @@ module.exports =
       if completion.type is 'property'
         propertyClass = @getPropertyClass(completion.name)
         @loadProperty(completion.name, propertyClass, classes)
+
+clone = (obj) ->
+  newObj = {}
+  newObj[k] = v for k, v of obj
+  newObj
