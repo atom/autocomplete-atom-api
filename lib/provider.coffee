@@ -7,7 +7,7 @@ module.exports =
   selector: '.source.coffee, .source.js'
 
   getSuggestions: ({bufferPosition, editor}) ->
-    return [] unless @isEditingAnAtomPackageFile(editor)
+    return unless @isEditingAnAtomPackageFile(editor)
 
     line = editor.getTextInRange([[bufferPosition.row, 0], bufferPosition])
     @getCompletions(line)
@@ -39,6 +39,11 @@ module.exports =
   isAtomCore: (metadata)->
     metadata?.name is 'atom'
 
+  isEditingAnAtomPackageFile: (editor) ->
+    for directory in @packageDirectories ? []
+      return true if directory.contains(editor.getPath())
+    false
+
   loadCompletions: ->
     @completions ?= {}
 
@@ -49,11 +54,6 @@ module.exports =
       classes = JSON.parse(content)
       @loadProperty('atom', 'Atom', classes)
       return
-
-  isEditingAnAtomPackageFile: (editor) ->
-    for directory in @packageDirectories ? []
-      return true if directory.contains(editor.getPath())
-    false
 
   getCompletions: (line) ->
     completions = []
@@ -84,6 +84,7 @@ module.exports =
       if completion.type is 'property'
         propertyClass = @getPropertyClass(completion.name)
         @loadProperty(completion.name, propertyClass, classes)
+    return
 
 clone = (obj) ->
   newObj = {}
