@@ -55,9 +55,13 @@ describe "Atom API autocompletions", ->
     editor.setCursorBufferPosition([0, Infinity])
     expect(getCompletions().length).toBe 4
     expect(getCompletions()[0].text).toBe 'commands'
+    expect(getCompletions()[0].type).toBe 'property'
+    expect(getCompletions()[0].leftLabel).toBe 'CommandRegistry'
     expect(getCompletions()[1].text).toBe 'config'
     expect(getCompletions()[2].text).toBe 'contextMenu'
     expect(getCompletions()[3].snippet).toBe 'confirm(${1:options})'
+    expect(getCompletions()[3].type).toBe 'method'
+    expect(getCompletions()[3].leftLabel).toBe 'Number'
 
     editor.setText('atom.commands')
     editor.setCursorBufferPosition([0, Infinity])
