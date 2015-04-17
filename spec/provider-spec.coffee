@@ -36,7 +36,7 @@ describe "Atom API autocompletions", ->
       editor.setText('atom.')
       editor.setCursorBufferPosition([0, Infinity])
 
-      expect(getCompletions().length).toBe 0
+      expect(getCompletions()).toBeUndefined()
 
   it "includes properties and functions on the atom global", ->
     editor.setText('atom.')
@@ -62,6 +62,7 @@ describe "Atom API autocompletions", ->
     expect(getCompletions()[3].snippet).toBe 'confirm(${1:options})'
     expect(getCompletions()[3].type).toBe 'method'
     expect(getCompletions()[3].leftLabel).toBe 'Number'
+    expect(getCompletions()[3].descriptionMoreURL).toBe 'https://atom.io/docs/api/latest/Atom#instance-confirm'
 
     editor.setText('atom.commands')
     editor.setCursorBufferPosition([0, Infinity])

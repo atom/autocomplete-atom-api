@@ -35,6 +35,8 @@ request requestOptions, (error, response, release) ->
 
     publicClasses = {}
     for name, {instanceProperties, instanceMethods} of classes
+      pluckPropertyAttributes = convertPropertyToSuggestion.bind(this, name)
+      pluckMethodAttributes = convertMethodToSuggestion.bind(this, name)
       properties = instanceProperties.filter(isVisible).map(pluckPropertyAttributes).sort(textComparator)
       methods = instanceMethods.filter(isVisible).map(pluckMethodAttributes).sort(textComparator)
 
@@ -46,9 +48,9 @@ request requestOptions, (error, response, release) ->
 isVisible = ({visibility}) ->
   visibility in ['Essential', 'Extended', 'Public']
 
-pluckMethodAttributes = (attributes) ->
-  {name, summary, returnValues} = attributes
-  args = attributes['arguments']
+convertMethodToSuggestion = (className, method) ->
+  {name, summary, returnValues} = method
+  args = method['arguments']
 
   snippets = []
   if args?.length
@@ -63,12 +65,19 @@ pluckMethodAttributes = (attributes) ->
     text = "#{name}()"
 
   returnValue = returnValues?[0]?.type
-  {name, text, snippet, description: summary, leftLabel: returnValue, type: 'method'}
+  description = summary
+  descriptionMoreURL = getDocLink(className, name)
+  {name, text, snippet, description, descriptionMoreURL, leftLabel: returnValue, type: 'method'}
 
-pluckPropertyAttributes = ({name, summary}) ->
+convertPropertyToSuggestion = (className, {name, summary}) ->
   text = name
   returnValue = summary?.match(/\{(\w+)\}/)?[1]
-  {name, text, description: summary, leftLabel: returnValue, type: 'property'}
+  description = summary
+  descriptionMoreURL = getDocLink(className, name)
+  {name, text, description, descriptionMoreURL, leftLabel: returnValue, type: 'property'}
+
+getDocLink = (className, instanceName) ->
+  "https://atom.io/docs/api/latest/#{className}#instance-#{instanceName}"
 
 textComparator = (a, b) ->
   return 1 if a.name > b.name
