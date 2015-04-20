@@ -7,7 +7,7 @@ module.exports =
   selector: '.source.coffee, .source.js'
 
   getSuggestions: ({bufferPosition, editor}) ->
-    return [] unless @isEditingAnAtomPackageFile(editor)
+    return unless @isEditingAnAtomPackageFile(editor)
 
     line = editor.getTextInRange([[bufferPosition.row, 0], bufferPosition])
     @getCompletions(line)
@@ -39,6 +39,11 @@ module.exports =
   isAtomCore: (metadata)->
     metadata?.name is 'atom'
 
+  isEditingAnAtomPackageFile: (editor) ->
+    for directory in @packageDirectories ? []
+      return true if directory.contains(editor.getPath())
+    false
+
   loadCompletions: ->
     @completions ?= {}
 
@@ -49,11 +54,6 @@ module.exports =
       classes = JSON.parse(content)
       @loadProperty('atom', 'Atom', classes)
       return
-
-  isEditingAnAtomPackageFile: (editor) ->
-    for directory in @packageDirectories ? []
-      return true if directory.contains(editor.getPath())
-    false
 
   getCompletions: (line) ->
     completions = []
@@ -67,23 +67,26 @@ module.exports =
     propertyCompletions = @completions[property]?.completions ? []
     lowerCasePrefix = prefix.toLowerCase()
     for completion in propertyCompletions when completion.name.indexOf(lowerCasePrefix) is 0
-      completions.push({text: completion.name, rightLabel: completion.type, replacementPrefix: prefix})
-
+      completions.push(clone(completion))
     completions
 
   getPropertyClass: (name) ->
     atom[name]?.constructor?.name
 
   loadProperty: (propertyName, className, classes, parent) ->
-    classDetails = classes[className]
-    return unless classDetails?
+    classCompletions = classes[className]
+    return unless classCompletions?
 
     @completions[propertyName] = completions: []
 
-    for name in classDetails?.properties
-      @completions[propertyName].completions.push({name: name, type: 'property'})
-      propertyClass = @getPropertyClass(name)
-      @loadProperty(name, propertyClass, classes)
+    for completion in classCompletions
+      @completions[propertyName].completions.push(completion)
+      if completion.type is 'property'
+        propertyClass = @getPropertyClass(completion.name)
+        @loadProperty(completion.name, propertyClass, classes)
+    return
 
-    for name in classDetails?.methods
-      @completions[propertyName].completions.push({name, type: 'method'})
+clone = (obj) ->
+  newObj = {}
+  newObj[k] = v for k, v of obj
+  newObj
