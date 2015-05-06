@@ -5,10 +5,10 @@ propertyPrefixPattern = /(?:^|\[|\(|,|=|:|\s)\s*(atom\.(?:[a-zA-Z]+\.?){0,2})$/
 
 module.exports =
   selector: '.source.coffee, .source.js'
+  filterSuggestions: true
 
   getSuggestions: ({bufferPosition, editor}) ->
     return unless @isEditingAnAtomPackageFile(editor)
-
     line = editor.getTextInRange([[bufferPosition.row, 0], bufferPosition])
     @getCompletions(line)
 
@@ -49,7 +49,6 @@ module.exports =
 
     fs.readFile path.resolve(__dirname, '..', 'completions.json'), (error, content) =>
       return if error?
-
       @completions = {}
       classes = JSON.parse(content)
       @loadProperty('atom', 'Atom', classes)
@@ -65,8 +64,7 @@ module.exports =
     segments = segments.filter (segment) -> segment
     property = segments[segments.length - 1]
     propertyCompletions = @completions[property]?.completions ? []
-    lowerCasePrefix = prefix.toLowerCase()
-    for completion in propertyCompletions when completion.name.indexOf(lowerCasePrefix) is 0
+    for completion in propertyCompletions when not prefix or firstCharsEqual(completion.name, prefix)
       completions.push(clone(completion))
     completions
 
@@ -90,3 +88,6 @@ clone = (obj) ->
   newObj = {}
   newObj[k] = v for k, v of obj
   newObj
+
+firstCharsEqual = (str1, str2) ->
+  str1[0].toLowerCase() is str2[0].toLowerCase()

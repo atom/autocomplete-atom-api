@@ -51,33 +51,18 @@ describe "Atom API autocompletions", ->
     expect(getCompletions().length).toBe 45
     expect(getCompletions()[0].text).toBe 'clipboard'
 
-    editor.setText('atom.co')
+    editor.setText('atom.c')
     editor.setCursorBufferPosition([0, Infinity])
-    expect(getCompletions().length).toBe 4
-    expect(getCompletions()[0].text).toBe 'commands'
+    expect(getCompletions().length).toBe 7
+    expect(getCompletions()[0].text).toBe 'clipboard'
     expect(getCompletions()[0].type).toBe 'property'
-    expect(getCompletions()[0].leftLabel).toBe 'CommandRegistry'
-    expect(getCompletions()[1].text).toBe 'config'
-    expect(getCompletions()[2].text).toBe 'contextMenu'
-    expect(getCompletions()[3].snippet).toBe 'confirm(${1:options})'
-    expect(getCompletions()[3].type).toBe 'method'
-    expect(getCompletions()[3].leftLabel).toBe 'Number'
-    expect(getCompletions()[3].descriptionMoreURL).toBe 'https://atom.io/docs/api/latest/Atom#instance-confirm'
-
-    editor.setText('atom.commands')
-    editor.setCursorBufferPosition([0, Infinity])
-    expect(getCompletions().length).toBe 1
-    expect(getCompletions()[0].text).toBe 'commands'
-
-    editor.setText('atom.Command')
-    editor.setCursorBufferPosition([0, Infinity])
-    expect(getCompletions().length).toBe 1
-    expect(getCompletions()[0].text).toBe 'commands'
-
-    editor.setText('atom.commands ')
-    editor.setCursorBufferPosition([0, 13])
-    expect(getCompletions().length).toBe 1
-    expect(getCompletions()[0].text).toBe 'commands'
+    expect(getCompletions()[0].leftLabel).toBe 'Clipboard'
+    expect(getCompletions()[1].text).toBe 'commands'
+    expect(getCompletions()[2].text).toBe 'config'
+    expect(getCompletions()[6].snippet).toBe 'confirm(${1:options})'
+    expect(getCompletions()[6].type).toBe 'method'
+    expect(getCompletions()[6].leftLabel).toBe 'Number'
+    expect(getCompletions()[6].descriptionMoreURL).toBe 'https://atom.io/docs/api/latest/Atom#instance-confirm'
 
   it "includes methods on atom global properties", ->
     editor.setText('atom.clipboard.')
