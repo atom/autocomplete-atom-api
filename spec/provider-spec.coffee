@@ -38,6 +38,20 @@ describe "Atom API autocompletions", ->
 
       expect(getCompletions()).toBeUndefined()
 
+  it "only includes completions in .atom/init", ->
+    emptyProjectPath = temp.mkdirSync('some-guy')
+    atom.project.setPaths([emptyProjectPath])
+
+    waitsForPromise -> atom.workspace.open('.atom/init.coffee')
+
+    runs ->
+      expect(provider.packageDirectories.length).toBe 0
+      editor = atom.workspace.getActiveTextEditor()
+      editor.setText('atom.')
+      editor.setCursorBufferPosition([0, Infinity])
+
+      expect(getCompletions()).not.toBeUndefined()
+
   it "includes properties and functions on the atom global", ->
     editor.setText('atom.')
     editor.setCursorBufferPosition([0, Infinity])

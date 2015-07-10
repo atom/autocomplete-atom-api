@@ -37,12 +37,14 @@ module.exports =
   isAtomPackage: (metadata) ->
     metadata?.engines?.atom?.length > 0
 
-  isAtomCore: (metadata)->
+  isAtomCore: (metadata) ->
     metadata?.name is 'atom'
 
   isEditingAnAtomPackageFile: (editor) ->
+    editorPath = editor.getPath()
+    return true if editorPath.endsWith('.atom/init.coffee') or editorPath.endsWith('.atom/init.js')
     for directory in @packageDirectories ? []
-      return true if directory.contains(editor.getPath())
+      return true if directory.contains(editorPath)
     false
 
   loadCompletions: ->
