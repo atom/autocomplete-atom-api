@@ -20,6 +20,7 @@ module.exports =
   scanProjectDirectories: ->
     @packageDirectories = []
     atom.project.getDirectories().forEach (directory) =>
+      return unless directory?
       @readMetadata directory, (error, metadata) =>
         if @isAtomPackage(metadata) or @isAtomCore(metadata)
           @packageDirectories.push(directory)
