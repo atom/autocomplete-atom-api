@@ -69,13 +69,13 @@ describe "Atom API autocompletions", ->
     editor.setText('atom.')
     editor.setCursorBufferPosition([0, Infinity])
 
-    expect(getCompletions().length).toBe 45
+    expect(getCompletions().length).toBe 48
     expect(getCompletions()[0].text).toBe 'clipboard'
 
     editor.setText('var c = atom.')
     editor.setCursorBufferPosition([0, Infinity])
 
-    expect(getCompletions().length).toBe 45
+    expect(getCompletions().length).toBe 48
     expect(getCompletions()[0].text).toBe 'clipboard'
 
     editor.setText('atom.c')
@@ -89,7 +89,7 @@ describe "Atom API autocompletions", ->
     expect(getCompletions()[6].snippet).toBe 'confirm(${1:options})'
     expect(getCompletions()[6].type).toBe 'method'
     expect(getCompletions()[6].leftLabel).toBe 'Number'
-    expect(getCompletions()[6].descriptionMoreURL).toBe 'https://atom.io/docs/api/latest/Atom#instance-confirm'
+    expect(getCompletions()[6].descriptionMoreURL).toBe 'https://atom.io/docs/api/latest/AtomEnvironment#instance-confirm'
 
   it "includes methods on atom global properties", ->
     editor.setText('atom.clipboard.')

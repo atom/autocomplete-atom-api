@@ -54,7 +54,7 @@ module.exports =
       return if error?
       @completions = {}
       classes = JSON.parse(content)
-      @loadProperty('atom', 'Atom', classes)
+      @loadProperty('atom', 'AtomEnvironment', classes)
       return
 
   getCompletions: (line) ->
