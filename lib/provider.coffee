@@ -42,7 +42,11 @@ module.exports =
 
   isEditingAnAtomPackageFile: (editor) ->
     editorPath = editor.getPath()
-    return true if editorPath? and (editorPath.endsWith('.atom/init.coffee') or editorPath.endsWith('.atom/init.js'))
+    if editorPath?
+      parsedPath = path.parse(editorPath)
+      if path.basename(parsedPath.dir) is '.atom'
+        if parsedPath.base is 'init.coffee' or parsedPath.base is 'init.js'
+          return true
     for directory in @packageDirectories ? []
       return true if directory.contains(editorPath)
     false
