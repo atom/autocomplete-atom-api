@@ -1,6 +1,8 @@
 fs = require 'fs'
 path = require 'path'
 
+CLASSES = require('../completions.json')
+
 propertyPrefixPattern = /(?:^|\[|\(|,|=|:|\s)\s*(atom\.(?:[a-zA-Z]+\.?){0,2})$/
 
 module.exports =
@@ -53,13 +55,7 @@ module.exports =
 
   loadCompletions: ->
     @completions ?= {}
-
-    fs.readFile path.resolve(__dirname, '..', 'completions.json'), (error, content) =>
-      return if error?
-      @completions = {}
-      classes = JSON.parse(content)
-      @loadProperty('atom', 'AtomEnvironment', classes)
-      return
+    @loadProperty('atom', 'AtomEnvironment', CLASSES)
 
   getCompletions: (line) ->
     completions = []
