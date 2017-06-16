@@ -42,7 +42,7 @@ request requestOptions, (error, response, release) ->
       if properties?.length > 0 or methods.length > 0
         publicClasses[name] = properties.concat(methods)
 
-    fs.writeFileSync('completions.json', JSON.stringify(publicClasses))
+    fs.writeFileSync('completions.json', JSON.stringify(publicClasses, null, '  '))
 
 isVisible = ({visibility}) ->
   visibility in ['Essential', 'Extended', 'Public']
