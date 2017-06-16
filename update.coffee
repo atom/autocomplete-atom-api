@@ -1,7 +1,6 @@
 # Run this to update the static list of properties stored in the
 # completions.json file at the root of this repository.
 
-path = require 'path'
 fs = require 'fs'
 request = require 'request'
 
