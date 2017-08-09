@@ -714,14 +714,6 @@
   ],
   "Cursor": [
     {
-      "name": "clearAutoscroll",
-      "text": "clearAutoscroll()",
-      "snippet": null,
-      "description": "Prevents this cursor from causing scrolling. ",
-      "descriptionMoreURL": "https://atom.io/docs/api/latest/Cursor#instance-clearAutoscroll",
-      "type": "method"
-    },
-    {
       "name": "clearSelection",
       "text": "clearSelection()",
       "snippet": null,
@@ -971,15 +963,6 @@
       "type": "method"
     },
     {
-      "name": "isVisible",
-      "text": "isVisible()",
-      "snippet": null,
-      "description": "",
-      "descriptionMoreURL": "https://atom.io/docs/api/latest/Cursor#instance-isVisible",
-      "leftLabel": null,
-      "type": "method"
-    },
-    {
       "name": "moveDown",
       "text": null,
       "snippet": "moveDown(${1:rowCount}, ${2:options})",
@@ -1149,15 +1132,6 @@
       "type": "method"
     },
     {
-      "name": "onDidChangeVisibility",
-      "text": null,
-      "snippet": "onDidChangeVisibility(${1:callback})",
-      "description": "Calls your `callback` when the cursor's visibility has changed",
-      "descriptionMoreURL": "https://atom.io/docs/api/latest/Cursor#instance-onDidChangeVisibility",
-      "leftLabel": "Disposable",
-      "type": "method"
-    },
-    {
       "name": "onDidDestroy",
       "text": null,
       "snippet": "onDidDestroy(${1:callback})",
@@ -1180,14 +1154,6 @@
       "snippet": "setScreenPosition(${1:screenPosition}, ${2:options})",
       "description": "Moves a cursor to a given screen position.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Cursor#instance-setScreenPosition",
-      "type": "method"
-    },
-    {
-      "name": "setVisible",
-      "text": "setVisible()",
-      "snippet": null,
-      "description": "Sets whether the cursor is visible. ",
-      "descriptionMoreURL": "https://atom.io/docs/api/latest/Cursor#instance-setVisible",
       "type": "method"
     },
     {
@@ -3580,7 +3546,7 @@
     {
       "name": "activateItem",
       "text": null,
-      "snippet": "activateItem(${1:options})",
+      "snippet": "activateItem(${1:item}, ${2:options})",
       "description": "Make the given item *active*, causing it to be displayed by\nthe pane's view.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Pane#instance-activateItem",
       "type": "method"
@@ -3666,7 +3632,7 @@
       "snippet": "destroyItem(${1:item}, ${2:force})",
       "description": "Destroy the given item.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Pane#instance-destroyItem",
-      "leftLabel": "Boolean",
+      "leftLabel": "Promise",
       "type": "method"
     },
     {
@@ -3946,6 +3912,7 @@
       "snippet": "saveActiveItemAs(${1:nextAction})",
       "description": "Prompt the user for a location and save the active item with the\npath they select.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Pane#instance-saveActiveItemAs",
+      "leftLabel": "Promise",
       "type": "method"
     },
     {
@@ -3954,6 +3921,7 @@
       "snippet": "saveItem(${1:item}, ${2:nextAction})",
       "description": "Save the given item.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Pane#instance-saveItem",
+      "leftLabel": "Promise",
       "type": "method"
     },
     {
@@ -4006,77 +3974,6 @@
       "description": "Creates a new pane above the receiver.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Pane#instance-splitUp",
       "leftLabel": "Pane",
-      "type": "method"
-    }
-  ],
-  "Panel": [
-    {
-      "name": "destroy",
-      "text": "destroy()",
-      "snippet": null,
-      "description": "Destroy and remove this panel from the UI.",
-      "descriptionMoreURL": "https://atom.io/docs/api/latest/Panel#instance-destroy",
-      "type": "method"
-    },
-    {
-      "name": "getItem",
-      "text": "getItem()",
-      "snippet": null,
-      "description": "",
-      "descriptionMoreURL": "https://atom.io/docs/api/latest/Panel#instance-getItem",
-      "leftLabel": null,
-      "type": "method"
-    },
-    {
-      "name": "getPriority",
-      "text": "getPriority()",
-      "snippet": null,
-      "description": "",
-      "descriptionMoreURL": "https://atom.io/docs/api/latest/Panel#instance-getPriority",
-      "leftLabel": "Number",
-      "type": "method"
-    },
-    {
-      "name": "hide",
-      "text": "hide()",
-      "snippet": null,
-      "description": "Hide this panel",
-      "descriptionMoreURL": "https://atom.io/docs/api/latest/Panel#instance-hide",
-      "type": "method"
-    },
-    {
-      "name": "isVisible",
-      "text": "isVisible()",
-      "snippet": null,
-      "description": "",
-      "descriptionMoreURL": "https://atom.io/docs/api/latest/Panel#instance-isVisible",
-      "leftLabel": "Boolean",
-      "type": "method"
-    },
-    {
-      "name": "onDidChangeVisible",
-      "text": null,
-      "snippet": "onDidChangeVisible(${1:callback}, ${2:visible})",
-      "description": "Invoke the given callback when the pane hidden or shown.",
-      "descriptionMoreURL": "https://atom.io/docs/api/latest/Panel#instance-onDidChangeVisible",
-      "leftLabel": "Disposable",
-      "type": "method"
-    },
-    {
-      "name": "onDidDestroy",
-      "text": null,
-      "snippet": "onDidDestroy(${1:callback}, ${2:panel})",
-      "description": "Invoke the given callback when the pane is destroyed.",
-      "descriptionMoreURL": "https://atom.io/docs/api/latest/Panel#instance-onDidDestroy",
-      "leftLabel": "Disposable",
-      "type": "method"
-    },
-    {
-      "name": "show",
-      "text": "show()",
-      "snippet": null,
-      "description": "Show this panel",
-      "descriptionMoreURL": "https://atom.io/docs/api/latest/Panel#instance-show",
       "type": "method"
     }
   ],
@@ -5109,62 +5006,16 @@
       "type": "method"
     }
   ],
-  "StyleManager": [
-    {
-      "name": "getStyleElements",
-      "text": "getStyleElements()",
-      "snippet": null,
-      "description": "Get all loaded style elements.",
-      "descriptionMoreURL": "https://atom.io/docs/api/latest/StyleManager#instance-getStyleElements",
-      "type": "method"
-    },
-    {
-      "name": "getUserStyleSheetPath",
-      "text": "getUserStyleSheetPath()",
-      "snippet": null,
-      "description": "Get the path of the user style sheet in `~/.atom`.",
-      "descriptionMoreURL": "https://atom.io/docs/api/latest/StyleManager#instance-getUserStyleSheetPath",
-      "leftLabel": "String",
-      "type": "method"
-    },
-    {
-      "name": "observeStyleElements",
-      "text": null,
-      "snippet": "observeStyleElements(${1:callback}, ${2:styleElement}, ${3:sourcePath}, ${4:context})",
-      "description": "Invoke `callback` for all current and future style elements.",
-      "descriptionMoreURL": "https://atom.io/docs/api/latest/StyleManager#instance-observeStyleElements",
-      "leftLabel": "Disposable",
-      "type": "method"
-    },
-    {
-      "name": "onDidAddStyleElement",
-      "text": null,
-      "snippet": "onDidAddStyleElement(${1:callback}, ${2:styleElement}, ${3:sourcePath}, ${4:context})",
-      "description": "Invoke `callback` when a style element is added.",
-      "descriptionMoreURL": "https://atom.io/docs/api/latest/StyleManager#instance-onDidAddStyleElement",
-      "leftLabel": "Disposable",
-      "type": "method"
-    },
-    {
-      "name": "onDidRemoveStyleElement",
-      "text": null,
-      "snippet": "onDidRemoveStyleElement(${1:callback}, ${2:styleElement})",
-      "description": "Invoke `callback` when a style element is removed.",
-      "descriptionMoreURL": "https://atom.io/docs/api/latest/StyleManager#instance-onDidRemoveStyleElement",
-      "leftLabel": "Disposable",
-      "type": "method"
-    },
-    {
-      "name": "onDidUpdateStyleElement",
-      "text": null,
-      "snippet": "onDidUpdateStyleElement(${1:callback}, ${2:styleElement}, ${3:sourcePath}, ${4:context})",
-      "description": "Invoke `callback` when an existing style element is updated.",
-      "descriptionMoreURL": "https://atom.io/docs/api/latest/StyleManager#instance-onDidUpdateStyleElement",
-      "leftLabel": "Disposable",
-      "type": "method"
-    }
-  ],
   "Task": [
+    {
+      "name": "cancel",
+      "text": "cancel()",
+      "snippet": null,
+      "description": "Cancel the running task and emit an event if it was canceled.",
+      "descriptionMoreURL": "https://atom.io/docs/api/latest/Task#instance-cancel",
+      "leftLabel": "Boolean",
+      "type": "method"
+    },
     {
       "name": "constructor",
       "text": null,
@@ -5601,6 +5452,24 @@
       "type": "method"
     },
     {
+      "name": "load",
+      "text": null,
+      "snippet": "load(${1:source}, ${2:params})",
+      "description": "Create a new buffer backed by the given file path.",
+      "descriptionMoreURL": "https://atom.io/docs/api/latest/TextBuffer#instance-load",
+      "leftLabel": "Promise",
+      "type": "method"
+    },
+    {
+      "name": "loadSync",
+      "text": null,
+      "snippet": "loadSync(${1:filePath}, ${2:params})",
+      "description": "Create a new buffer backed by the given file path. For better\nperformance, use {TextBuffer.load} instead.",
+      "descriptionMoreURL": "https://atom.io/docs/api/latest/TextBuffer#instance-loadSync",
+      "leftLabel": "TextBuffer",
+      "type": "method"
+    },
+    {
       "name": "markPosition",
       "text": null,
       "snippet": "markPosition(${1:position}, ${2:options})",
@@ -5819,8 +5688,9 @@
       "name": "reload",
       "text": "reload()",
       "snippet": null,
-      "description": "Reload the buffer's contents from disk.",
+      "description": "Reload the file's content from disk.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/TextBuffer#instance-reload",
+      "leftLabel": "Promise",
       "type": "method"
     },
     {
@@ -5845,8 +5715,9 @@
       "name": "save",
       "text": "save()",
       "snippet": null,
-      "description": "Save the buffer. ",
+      "description": "Save the buffer.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/TextBuffer#instance-save",
+      "leftLabel": "Promise",
       "type": "method"
     },
     {
@@ -5855,6 +5726,7 @@
       "snippet": "saveAs(${1:filePath})",
       "description": "Save the buffer at a specific path.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/TextBuffer#instance-saveAs",
+      "leftLabel": "Promise",
       "type": "method"
     },
     {
@@ -8121,11 +7993,27 @@
       "type": "method"
     },
     {
+      "name": "getBottomDock",
+      "text": "getBottomDock()",
+      "snippet": null,
+      "description": "Get the {Dock} below the editor window.",
+      "descriptionMoreURL": "https://atom.io/docs/api/latest/Workspace#instance-getBottomDock",
+      "type": "method"
+    },
+    {
       "name": "getBottomPanels",
       "text": "getBottomPanels()",
       "snippet": null,
       "description": "Get an {Array} of all the panel items at the bottom of the editor window.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Workspace#instance-getBottomPanels",
+      "type": "method"
+    },
+    {
+      "name": "getCenter",
+      "text": "getCenter()",
+      "snippet": null,
+      "description": "Get the {WorkspaceCenter} at the center of the editor window.",
+      "descriptionMoreURL": "https://atom.io/docs/api/latest/Workspace#instance-getCenter",
       "type": "method"
     },
     {
@@ -8142,6 +8030,14 @@
       "snippet": null,
       "description": "Get an {Array} of all the panel items in the header.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Workspace#instance-getHeaderPanels",
+      "type": "method"
+    },
+    {
+      "name": "getLeftDock",
+      "text": "getLeftDock()",
+      "snippet": null,
+      "description": "Get the {Dock} to the left of the editor window.",
+      "descriptionMoreURL": "https://atom.io/docs/api/latest/Workspace#instance-getLeftDock",
       "type": "method"
     },
     {
@@ -8176,6 +8072,14 @@
       "description": "Get all panes in the workspace.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Workspace#instance-getPanes",
       "leftLabel": "Array",
+      "type": "method"
+    },
+    {
+      "name": "getRightDock",
+      "text": "getRightDock()",
+      "snippet": null,
+      "description": "Get the {Dock} to the right of the editor window.",
+      "descriptionMoreURL": "https://atom.io/docs/api/latest/Workspace#instance-getRightDock",
       "type": "method"
     },
     {
