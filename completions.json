@@ -3977,6 +3977,77 @@
       "type": "method"
     }
   ],
+  "Panel": [
+    {
+      "name": "destroy",
+      "text": "destroy()",
+      "snippet": null,
+      "description": "Destroy and remove this panel from the UI.",
+      "descriptionMoreURL": "https://atom.io/docs/api/latest/Panel#instance-destroy",
+      "type": "method"
+    },
+    {
+      "name": "getItem",
+      "text": "getItem()",
+      "snippet": null,
+      "description": "",
+      "descriptionMoreURL": "https://atom.io/docs/api/latest/Panel#instance-getItem",
+      "leftLabel": null,
+      "type": "method"
+    },
+    {
+      "name": "getPriority",
+      "text": "getPriority()",
+      "snippet": null,
+      "description": "",
+      "descriptionMoreURL": "https://atom.io/docs/api/latest/Panel#instance-getPriority",
+      "leftLabel": "Number",
+      "type": "method"
+    },
+    {
+      "name": "hide",
+      "text": "hide()",
+      "snippet": null,
+      "description": "Hide this panel",
+      "descriptionMoreURL": "https://atom.io/docs/api/latest/Panel#instance-hide",
+      "type": "method"
+    },
+    {
+      "name": "isVisible",
+      "text": "isVisible()",
+      "snippet": null,
+      "description": "",
+      "descriptionMoreURL": "https://atom.io/docs/api/latest/Panel#instance-isVisible",
+      "leftLabel": "Boolean",
+      "type": "method"
+    },
+    {
+      "name": "onDidChangeVisible",
+      "text": null,
+      "snippet": "onDidChangeVisible(${1:callback}, ${2:visible})",
+      "description": "Invoke the given callback when the pane hidden or shown.",
+      "descriptionMoreURL": "https://atom.io/docs/api/latest/Panel#instance-onDidChangeVisible",
+      "leftLabel": "Disposable",
+      "type": "method"
+    },
+    {
+      "name": "onDidDestroy",
+      "text": null,
+      "snippet": "onDidDestroy(${1:callback}, ${2:panel})",
+      "description": "Invoke the given callback when the pane is destroyed.",
+      "descriptionMoreURL": "https://atom.io/docs/api/latest/Panel#instance-onDidDestroy",
+      "leftLabel": "Disposable",
+      "type": "method"
+    },
+    {
+      "name": "show",
+      "text": "show()",
+      "snippet": null,
+      "description": "Show this panel",
+      "descriptionMoreURL": "https://atom.io/docs/api/latest/Panel#instance-show",
+      "type": "method"
+    }
+  ],
   "Point": [
     {
       "name": "column",
@@ -5003,6 +5074,61 @@
       "snippet": null,
       "description": "Wraps the selected lines in comments if they aren't currently part\nof a comment.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Selection#instance-toggleLineComments",
+      "type": "method"
+    }
+  ],
+  "StyleManager": [
+    {
+      "name": "getStyleElements",
+      "text": "getStyleElements()",
+      "snippet": null,
+      "description": "Get all loaded style elements.",
+      "descriptionMoreURL": "https://atom.io/docs/api/latest/StyleManager#instance-getStyleElements",
+      "type": "method"
+    },
+    {
+      "name": "getUserStyleSheetPath",
+      "text": "getUserStyleSheetPath()",
+      "snippet": null,
+      "description": "Get the path of the user style sheet in `~/.atom`.",
+      "descriptionMoreURL": "https://atom.io/docs/api/latest/StyleManager#instance-getUserStyleSheetPath",
+      "leftLabel": "String",
+      "type": "method"
+    },
+    {
+      "name": "observeStyleElements",
+      "text": null,
+      "snippet": "observeStyleElements(${1:callback}, ${2:styleElement}, ${3:sourcePath}, ${4:context})",
+      "description": "Invoke `callback` for all current and future style elements.",
+      "descriptionMoreURL": "https://atom.io/docs/api/latest/StyleManager#instance-observeStyleElements",
+      "leftLabel": "Disposable",
+      "type": "method"
+    },
+    {
+      "name": "onDidAddStyleElement",
+      "text": null,
+      "snippet": "onDidAddStyleElement(${1:callback}, ${2:styleElement}, ${3:sourcePath}, ${4:context})",
+      "description": "Invoke `callback` when a style element is added.",
+      "descriptionMoreURL": "https://atom.io/docs/api/latest/StyleManager#instance-onDidAddStyleElement",
+      "leftLabel": "Disposable",
+      "type": "method"
+    },
+    {
+      "name": "onDidRemoveStyleElement",
+      "text": null,
+      "snippet": "onDidRemoveStyleElement(${1:callback}, ${2:styleElement})",
+      "description": "Invoke `callback` when a style element is removed.",
+      "descriptionMoreURL": "https://atom.io/docs/api/latest/StyleManager#instance-onDidRemoveStyleElement",
+      "leftLabel": "Disposable",
+      "type": "method"
+    },
+    {
+      "name": "onDidUpdateStyleElement",
+      "text": null,
+      "snippet": "onDidUpdateStyleElement(${1:callback}, ${2:styleElement}, ${3:sourcePath}, ${4:context})",
+      "description": "Invoke `callback` when an existing style element is updated.",
+      "descriptionMoreURL": "https://atom.io/docs/api/latest/StyleManager#instance-onDidUpdateStyleElement",
+      "leftLabel": "Disposable",
       "type": "method"
     }
   ],
@@ -8375,6 +8501,213 @@
       "description": "Search the workspace for items matching the given URI. If any are found, hide them.\nOtherwise, open the URL.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Workspace#instance-toggle",
       "leftLabel": null,
+      "type": "method"
+    }
+  ],
+  "WorkspaceCenter": [
+    {
+      "name": "activateNextPane",
+      "text": "activateNextPane()",
+      "snippet": null,
+      "description": "Make the next pane active.",
+      "descriptionMoreURL": "https://atom.io/docs/api/latest/WorkspaceCenter#instance-activateNextPane",
+      "type": "method"
+    },
+    {
+      "name": "activatePreviousPane",
+      "text": "activatePreviousPane()",
+      "snippet": null,
+      "description": "Make the previous pane active.",
+      "descriptionMoreURL": "https://atom.io/docs/api/latest/WorkspaceCenter#instance-activatePreviousPane",
+      "type": "method"
+    },
+    {
+      "name": "getActivePane",
+      "text": "getActivePane()",
+      "snippet": null,
+      "description": "Get the active {Pane}.",
+      "descriptionMoreURL": "https://atom.io/docs/api/latest/WorkspaceCenter#instance-getActivePane",
+      "leftLabel": "Pane",
+      "type": "method"
+    },
+    {
+      "name": "getActivePaneItem",
+      "text": "getActivePaneItem()",
+      "snippet": null,
+      "description": "Get the active {Pane}'s active item.",
+      "descriptionMoreURL": "https://atom.io/docs/api/latest/WorkspaceCenter#instance-getActivePaneItem",
+      "leftLabel": "Object",
+      "type": "method"
+    },
+    {
+      "name": "getActiveTextEditor",
+      "text": "getActiveTextEditor()",
+      "snippet": null,
+      "description": "Get the active item if it is an {TextEditor}.",
+      "descriptionMoreURL": "https://atom.io/docs/api/latest/WorkspaceCenter#instance-getActiveTextEditor",
+      "leftLabel": "TextEditor",
+      "type": "method"
+    },
+    {
+      "name": "getPaneItems",
+      "text": "getPaneItems()",
+      "snippet": null,
+      "description": "Get all pane items in the workspace center.",
+      "descriptionMoreURL": "https://atom.io/docs/api/latest/WorkspaceCenter#instance-getPaneItems",
+      "leftLabel": "Array",
+      "type": "method"
+    },
+    {
+      "name": "getPanes",
+      "text": "getPanes()",
+      "snippet": null,
+      "description": "Get all panes in the workspace center.",
+      "descriptionMoreURL": "https://atom.io/docs/api/latest/WorkspaceCenter#instance-getPanes",
+      "leftLabel": "Array",
+      "type": "method"
+    },
+    {
+      "name": "getTextEditors",
+      "text": "getTextEditors()",
+      "snippet": null,
+      "description": "Get all text editors in the workspace center.",
+      "descriptionMoreURL": "https://atom.io/docs/api/latest/WorkspaceCenter#instance-getTextEditors",
+      "leftLabel": "Array",
+      "type": "method"
+    },
+    {
+      "name": "observeActivePane",
+      "text": null,
+      "snippet": "observeActivePane(${1:callback}, ${2:pane})",
+      "description": "Invoke the given callback with the current active pane and when\nthe active pane changes.",
+      "descriptionMoreURL": "https://atom.io/docs/api/latest/WorkspaceCenter#instance-observeActivePane",
+      "leftLabel": "Disposable",
+      "type": "method"
+    },
+    {
+      "name": "observeActivePaneItem",
+      "text": null,
+      "snippet": "observeActivePaneItem(${1:callback}, ${2:item})",
+      "description": "Invoke the given callback with the current active pane item and\nwith all future active pane items in the workspace center.",
+      "descriptionMoreURL": "https://atom.io/docs/api/latest/WorkspaceCenter#instance-observeActivePaneItem",
+      "leftLabel": "Disposable",
+      "type": "method"
+    },
+    {
+      "name": "observePaneItems",
+      "text": null,
+      "snippet": "observePaneItems(${1:callback}, ${2:item})",
+      "description": "Invoke the given callback with all current and future panes items\nin the workspace center.",
+      "descriptionMoreURL": "https://atom.io/docs/api/latest/WorkspaceCenter#instance-observePaneItems",
+      "leftLabel": "Disposable",
+      "type": "method"
+    },
+    {
+      "name": "observePanes",
+      "text": null,
+      "snippet": "observePanes(${1:callback}, ${2:pane})",
+      "description": "Invoke the given callback with all current and future panes in the\nworkspace center.",
+      "descriptionMoreURL": "https://atom.io/docs/api/latest/WorkspaceCenter#instance-observePanes",
+      "leftLabel": "Disposable",
+      "type": "method"
+    },
+    {
+      "name": "observeTextEditors",
+      "text": null,
+      "snippet": "observeTextEditors(${1:callback}, ${2:editor})",
+      "description": "Invoke the given callback with all current and future text\neditors in the workspace center.",
+      "descriptionMoreURL": "https://atom.io/docs/api/latest/WorkspaceCenter#instance-observeTextEditors",
+      "leftLabel": "Disposable",
+      "type": "method"
+    },
+    {
+      "name": "onDidAddPane",
+      "text": null,
+      "snippet": "onDidAddPane(${1:callback}, ${2:event}, ${3:pane})",
+      "description": "Invoke the given callback when a pane is added to the workspace\ncenter.",
+      "descriptionMoreURL": "https://atom.io/docs/api/latest/WorkspaceCenter#instance-onDidAddPane",
+      "leftLabel": "Disposable",
+      "type": "method"
+    },
+    {
+      "name": "onDidAddPaneItem",
+      "text": null,
+      "snippet": "onDidAddPaneItem(${1:callback}, ${2:event}, ${3:item}, ${4:pane}, ${5:index})",
+      "description": "Invoke the given callback when a pane item is added to the\nworkspace center.",
+      "descriptionMoreURL": "https://atom.io/docs/api/latest/WorkspaceCenter#instance-onDidAddPaneItem",
+      "leftLabel": "Disposable",
+      "type": "method"
+    },
+    {
+      "name": "onDidAddTextEditor",
+      "text": null,
+      "snippet": "onDidAddTextEditor(${1:callback}, ${2:event}, ${3:textEditor}, ${4:pane}, ${5:index})",
+      "description": "Invoke the given callback when a text editor is added to the\nworkspace center.",
+      "descriptionMoreURL": "https://atom.io/docs/api/latest/WorkspaceCenter#instance-onDidAddTextEditor",
+      "leftLabel": "Disposable",
+      "type": "method"
+    },
+    {
+      "name": "onDidChangeActivePane",
+      "text": null,
+      "snippet": "onDidChangeActivePane(${1:callback}, ${2:pane})",
+      "description": "Invoke the given callback when the active pane changes.",
+      "descriptionMoreURL": "https://atom.io/docs/api/latest/WorkspaceCenter#instance-onDidChangeActivePane",
+      "leftLabel": "Disposable",
+      "type": "method"
+    },
+    {
+      "name": "onDidChangeActivePaneItem",
+      "text": null,
+      "snippet": "onDidChangeActivePaneItem(${1:callback}, ${2:item})",
+      "description": "Invoke the given callback when the active pane item changes.",
+      "descriptionMoreURL": "https://atom.io/docs/api/latest/WorkspaceCenter#instance-onDidChangeActivePaneItem",
+      "leftLabel": "Disposable",
+      "type": "method"
+    },
+    {
+      "name": "onDidDestroyPane",
+      "text": null,
+      "snippet": "onDidDestroyPane(${1:callback}, ${2:event}, ${3:pane})",
+      "description": "Invoke the given callback when a pane is destroyed in the\nworkspace center.",
+      "descriptionMoreURL": "https://atom.io/docs/api/latest/WorkspaceCenter#instance-onDidDestroyPane",
+      "leftLabel": "Disposable",
+      "type": "method"
+    },
+    {
+      "name": "onDidDestroyPaneItem",
+      "text": null,
+      "snippet": "onDidDestroyPaneItem(${1:callback}, ${2:event}, ${3:item}, ${4:pane}, ${5:index})",
+      "description": "Invoke the given callback when a pane item is destroyed.",
+      "descriptionMoreURL": "https://atom.io/docs/api/latest/WorkspaceCenter#instance-onDidDestroyPaneItem",
+      "leftLabel": "Disposable",
+      "type": "method"
+    },
+    {
+      "name": "onDidStopChangingActivePaneItem",
+      "text": null,
+      "snippet": "onDidStopChangingActivePaneItem(${1:callback}, ${2:item})",
+      "description": "Invoke the given callback when the active pane item stops\nchanging.",
+      "descriptionMoreURL": "https://atom.io/docs/api/latest/WorkspaceCenter#instance-onDidStopChangingActivePaneItem",
+      "leftLabel": "Disposable",
+      "type": "method"
+    },
+    {
+      "name": "onWillDestroyPane",
+      "text": null,
+      "snippet": "onWillDestroyPane(${1:callback}, ${2:event}, ${3:pane})",
+      "description": "Invoke the given callback before a pane is destroyed in the\nworkspace center.",
+      "descriptionMoreURL": "https://atom.io/docs/api/latest/WorkspaceCenter#instance-onWillDestroyPane",
+      "leftLabel": "Disposable",
+      "type": "method"
+    },
+    {
+      "name": "onWillDestroyPaneItem",
+      "text": null,
+      "snippet": "onWillDestroyPaneItem(${1:callback}, ${2:event}, ${3:item}, ${4:pane}, ${5:index})",
+      "description": "Invoke the given callback when a pane item is about to be\ndestroyed, before the user is prompted to save it.",
+      "descriptionMoreURL": "https://atom.io/docs/api/latest/WorkspaceCenter#instance-onWillDestroyPaneItem",
+      "leftLabel": "Disposable",
       "type": "method"
     }
   ]
