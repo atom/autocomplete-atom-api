@@ -220,6 +220,15 @@
       "type": "method"
     },
     {
+      "name": "getReleaseChannel",
+      "text": "getReleaseChannel()",
+      "snippet": null,
+      "description": "Gets the release channel of the Atom application.",
+      "descriptionMoreURL": "https://atom.io/docs/api/latest/AtomEnvironment#instance-getReleaseChannel",
+      "leftLabel": "String",
+      "type": "method"
+    },
+    {
       "name": "getSize",
       "text": "getSize()",
       "snippet": null,
@@ -438,7 +447,7 @@
     {
       "name": "constructor",
       "text": null,
-      "snippet": "constructor(${1:options}, ${2:command}, ${3:args}, ${4:options}, ${5:stdout}, ${6:stderr}, ${7:exit})",
+      "snippet": "constructor(${1:options})",
       "description": "Runs the given Node script by spawning a new child process.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/BufferedNodeProcess#instance-constructor",
       "type": "method"
@@ -448,7 +457,7 @@
     {
       "name": "constructor",
       "text": null,
-      "snippet": "constructor(${1:options}, ${2:command}, ${3:args}, ${4:options}, ${5:stdout}, ${6:data}, ${7:stderr}, ${8:data}, ${9:exit}, ${10:code}, ${11:autoStart})",
+      "snippet": "constructor(${1:options})",
       "description": "Runs the given command by spawning a new child process.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/BufferedProcess#instance-constructor",
       "type": "method"
@@ -464,7 +473,7 @@
     {
       "name": "onWillThrowError",
       "text": null,
-      "snippet": "onWillThrowError(${1:callback}, ${2:errorObject}, ${3:error}, ${4:handle})",
+      "snippet": "onWillThrowError(${1:callback})",
       "description": "Will call your callback when an error will be raised by the process.\nUsually this is due to the command not being available or not on the PATH.\nYou can call `handle()` on the object passed to your callback to indicate\nthat you have handled this error.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/BufferedProcess#instance-onWillThrowError",
       "leftLabel": "Disposable",
@@ -1947,7 +1956,7 @@
     {
       "name": "observeActivePane",
       "text": null,
-      "snippet": "observeActivePane(${1:callback}, ${2:pane})",
+      "snippet": "observeActivePane(${1:callback})",
       "description": "Invoke the given callback with the current active pane and when\nthe active pane changes.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Dock#instance-observeActivePane",
       "leftLabel": "Disposable",
@@ -1956,7 +1965,7 @@
     {
       "name": "observeActivePaneItem",
       "text": null,
-      "snippet": "observeActivePaneItem(${1:callback}, ${2:item})",
+      "snippet": "observeActivePaneItem(${1:callback})",
       "description": "Invoke the given callback with the current active pane item and\nwith all future active pane items in the dock.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Dock#instance-observeActivePaneItem",
       "leftLabel": "Disposable",
@@ -1965,7 +1974,7 @@
     {
       "name": "observePaneItems",
       "text": null,
-      "snippet": "observePaneItems(${1:callback}, ${2:item})",
+      "snippet": "observePaneItems(${1:callback})",
       "description": "Invoke the given callback with all current and future panes items\nin the dock.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Dock#instance-observePaneItems",
       "leftLabel": "Disposable",
@@ -1974,16 +1983,25 @@
     {
       "name": "observePanes",
       "text": null,
-      "snippet": "observePanes(${1:callback}, ${2:pane})",
+      "snippet": "observePanes(${1:callback})",
       "description": "Invoke the given callback with all current and future panes in the\ndock.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Dock#instance-observePanes",
       "leftLabel": "Disposable",
       "type": "method"
     },
     {
+      "name": "observeVisible",
+      "text": null,
+      "snippet": "observeVisible(${1:callback})",
+      "description": "Invoke the given callback with the current and all future visibilities of the dock.",
+      "descriptionMoreURL": "https://atom.io/docs/api/latest/Dock#instance-observeVisible",
+      "leftLabel": "Disposable",
+      "type": "method"
+    },
+    {
       "name": "onDidAddPane",
       "text": null,
-      "snippet": "onDidAddPane(${1:callback}, ${2:event}, ${3:pane})",
+      "snippet": "onDidAddPane(${1:callback})",
       "description": "Invoke the given callback when a pane is added to the dock.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Dock#instance-onDidAddPane",
       "leftLabel": "Disposable",
@@ -1992,7 +2010,7 @@
     {
       "name": "onDidAddPaneItem",
       "text": null,
-      "snippet": "onDidAddPaneItem(${1:callback}, ${2:event}, ${3:item}, ${4:pane}, ${5:index})",
+      "snippet": "onDidAddPaneItem(${1:callback})",
       "description": "Invoke the given callback when a pane item is added to the dock.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Dock#instance-onDidAddPaneItem",
       "leftLabel": "Disposable",
@@ -2001,7 +2019,7 @@
     {
       "name": "onDidChangeActivePane",
       "text": null,
-      "snippet": "onDidChangeActivePane(${1:callback}, ${2:pane})",
+      "snippet": "onDidChangeActivePane(${1:callback})",
       "description": "Invoke the given callback when the active pane changes.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Dock#instance-onDidChangeActivePane",
       "leftLabel": "Disposable",
@@ -2010,16 +2028,25 @@
     {
       "name": "onDidChangeActivePaneItem",
       "text": null,
-      "snippet": "onDidChangeActivePaneItem(${1:callback}, ${2:item})",
+      "snippet": "onDidChangeActivePaneItem(${1:callback})",
       "description": "Invoke the given callback when the active pane item changes.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Dock#instance-onDidChangeActivePaneItem",
       "leftLabel": "Disposable",
       "type": "method"
     },
     {
+      "name": "onDidChangeVisible",
+      "text": null,
+      "snippet": "onDidChangeVisible(${1:callback})",
+      "description": "Invoke the given callback when the visibility of the dock changes.",
+      "descriptionMoreURL": "https://atom.io/docs/api/latest/Dock#instance-onDidChangeVisible",
+      "leftLabel": "Disposable",
+      "type": "method"
+    },
+    {
       "name": "onDidDestroyPane",
       "text": null,
-      "snippet": "onDidDestroyPane(${1:callback}, ${2:event}, ${3:pane})",
+      "snippet": "onDidDestroyPane(${1:callback})",
       "description": "Invoke the given callback when a pane is destroyed in the dock.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Dock#instance-onDidDestroyPane",
       "leftLabel": "Disposable",
@@ -2028,7 +2055,7 @@
     {
       "name": "onDidDestroyPaneItem",
       "text": null,
-      "snippet": "onDidDestroyPaneItem(${1:callback}, ${2:event}, ${3:item}, ${4:pane}, ${5:index})",
+      "snippet": "onDidDestroyPaneItem(${1:callback})",
       "description": "Invoke the given callback when a pane item is destroyed.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Dock#instance-onDidDestroyPaneItem",
       "leftLabel": "Disposable",
@@ -2037,7 +2064,7 @@
     {
       "name": "onDidStopChangingActivePaneItem",
       "text": null,
-      "snippet": "onDidStopChangingActivePaneItem(${1:callback}, ${2:item})",
+      "snippet": "onDidStopChangingActivePaneItem(${1:callback})",
       "description": "Invoke the given callback when the active pane item stops\nchanging.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Dock#instance-onDidStopChangingActivePaneItem",
       "leftLabel": "Disposable",
@@ -2046,7 +2073,7 @@
     {
       "name": "onWillDestroyPane",
       "text": null,
-      "snippet": "onWillDestroyPane(${1:callback}, ${2:event}, ${3:pane})",
+      "snippet": "onWillDestroyPane(${1:callback})",
       "description": "Invoke the given callback before a pane is destroyed in the\ndock.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Dock#instance-onWillDestroyPane",
       "leftLabel": "Disposable",
@@ -2055,7 +2082,7 @@
     {
       "name": "onWillDestroyPaneItem",
       "text": null,
-      "snippet": "onWillDestroyPaneItem(${1:callback}, ${2:event}, ${3:item}, ${4:pane}, ${5:index})",
+      "snippet": "onWillDestroyPaneItem(${1:callback})",
       "description": "Invoke the given callback when a pane item is about to be\ndestroyed, before the user is prompted to save it.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Dock#instance-onWillDestroyPaneItem",
       "leftLabel": "Disposable",
@@ -2073,7 +2100,7 @@
       "name": "toggle",
       "text": "toggle()",
       "snippet": null,
-      "description": "Toggle the dock's visiblity without changing the {Workspace}'s\nactive pane container.",
+      "description": "Toggle the dock's visibility without changing the {Workspace}'s\nactive pane container.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Dock#instance-toggle",
       "type": "method"
     }
@@ -2644,7 +2671,7 @@
       "name": "relativize",
       "text": "relativize()",
       "snippet": null,
-      "description": "Makes a path relative to the repository's working directory. ",
+      "description": "Makes a path relative to the repository's working directory.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/GitRepository#instance-relativize",
       "type": "method"
     }
@@ -2876,6 +2903,14 @@
       "description": "Customize translation of raw keyboard events to keystroke strings.\nThis API is useful for working around Chrome bugs or changing how Atom\nresolves certain key combinations. If multiple resolvers are installed,\nthe most recently-added resolver returning a string for a given keystroke\ntakes precedence.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/KeymapManager#instance-addKeystrokeResolver",
       "leftLabel": "Disposable",
+      "type": "method"
+    },
+    {
+      "name": "build",
+      "text": null,
+      "snippet": "build(${1:source}, ${2:bindings}, ${3:priority})",
+      "description": "Construct [KeyBindings]{KeyBinding} from an object grouping them by CSS selector.",
+      "descriptionMoreURL": "https://atom.io/docs/api/latest/KeymapManager#instance-build",
       "type": "method"
     },
     {
@@ -3352,7 +3387,7 @@
       "name": "getActivePackages",
       "text": "getActivePackages()",
       "snippet": null,
-      "description": "Get an {Array} of all the active {Package}s. ",
+      "description": "Get an {Array} of all the active {Package}s.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/PackageManager#instance-getActivePackages",
       "type": "method"
     },
@@ -3404,7 +3439,7 @@
       "name": "getLoadedPackages",
       "text": "getLoadedPackages()",
       "snippet": null,
-      "description": "Get an {Array} of all the loaded {Package}s ",
+      "description": "Get an {Array} of all the loaded {Package}s",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/PackageManager#instance-getLoadedPackages",
       "type": "method"
     },
@@ -4024,7 +4059,7 @@
     {
       "name": "onDidChangeVisible",
       "text": null,
-      "snippet": "onDidChangeVisible(${1:callback}, ${2:visible})",
+      "snippet": "onDidChangeVisible(${1:callback})",
       "description": "Invoke the given callback when the pane hidden or shown.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Panel#instance-onDidChangeVisible",
       "leftLabel": "Disposable",
@@ -4033,7 +4068,7 @@
     {
       "name": "onDidDestroy",
       "text": null,
-      "snippet": "onDidDestroy(${1:callback}, ${2:panel})",
+      "snippet": "onDidDestroy(${1:callback})",
       "description": "Invoke the given callback when the pane is destroyed.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Panel#instance-onDidDestroy",
       "leftLabel": "Disposable",
@@ -4045,6 +4080,33 @@
       "snippet": null,
       "description": "Show this panel",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Panel#instance-show",
+      "type": "method"
+    }
+  ],
+  "PathWatcher": [
+    {
+      "name": "dispose",
+      "text": "dispose()",
+      "snippet": null,
+      "description": "Unsubscribe all subscribers from filesystem events. Native resources will be release asynchronously,\nbut this watcher will stop broadcasting events immediately.",
+      "descriptionMoreURL": "https://atom.io/docs/api/latest/PathWatcher#instance-dispose",
+      "type": "method"
+    },
+    {
+      "name": "getStartPromise",
+      "text": "getStartPromise()",
+      "snippet": null,
+      "description": "Return a {Promise} that will resolve when the underlying native watcher is ready to begin sending events.\nWhen testing filesystem watchers, it's important to await this promise before making filesystem changes that you\nintend to assert about because there will be a delay between the instantiation of the watcher and the activation\nof the underlying OS resources that feed it events.",
+      "descriptionMoreURL": "https://atom.io/docs/api/latest/PathWatcher#instance-getStartPromise",
+      "type": "method"
+    },
+    {
+      "name": "onDidError",
+      "text": null,
+      "snippet": "onDidError(${1:callback})",
+      "description": "Invoke a {Function} when any errors related to this watcher are reported.",
+      "descriptionMoreURL": "https://atom.io/docs/api/latest/PathWatcher#instance-onDidError",
+      "leftLabel": "Disposable",
       "type": "method"
     }
   ],
@@ -4243,6 +4305,15 @@
       "type": "method"
     },
     {
+      "name": "getWatcherPromise",
+      "text": null,
+      "snippet": "getWatcherPromise(${1:projectPath})",
+      "description": "Access a {Promise} that resolves when the filesystem watcher associated with a project\nroot directory is ready to begin receiving events.",
+      "descriptionMoreURL": "https://atom.io/docs/api/latest/Project#instance-getWatcherPromise",
+      "leftLabel": "Promise",
+      "type": "method"
+    },
+    {
       "name": "observeBuffers",
       "text": null,
       "snippet": "observeBuffers(${1:callback})",
@@ -4257,6 +4328,15 @@
       "snippet": "onDidAddBuffer(${1:callback})",
       "description": "Invoke the given callback when a text buffer is added to the\nproject.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Project#instance-onDidAddBuffer",
+      "leftLabel": "Disposable",
+      "type": "method"
+    },
+    {
+      "name": "onDidChangeFiles",
+      "text": null,
+      "snippet": "onDidChangeFiles(${1:callback})",
+      "description": "Invoke a callback when a filesystem change occurs within any open\nproject path.",
+      "descriptionMoreURL": "https://atom.io/docs/api/latest/Project#instance-onDidChangeFiles",
       "leftLabel": "Disposable",
       "type": "method"
     },
@@ -5098,7 +5178,7 @@
     {
       "name": "observeStyleElements",
       "text": null,
-      "snippet": "observeStyleElements(${1:callback}, ${2:styleElement}, ${3:sourcePath}, ${4:context})",
+      "snippet": "observeStyleElements(${1:callback})",
       "description": "Invoke `callback` for all current and future style elements.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/StyleManager#instance-observeStyleElements",
       "leftLabel": "Disposable",
@@ -5107,7 +5187,7 @@
     {
       "name": "onDidAddStyleElement",
       "text": null,
-      "snippet": "onDidAddStyleElement(${1:callback}, ${2:styleElement}, ${3:sourcePath}, ${4:context})",
+      "snippet": "onDidAddStyleElement(${1:callback})",
       "description": "Invoke `callback` when a style element is added.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/StyleManager#instance-onDidAddStyleElement",
       "leftLabel": "Disposable",
@@ -5116,7 +5196,7 @@
     {
       "name": "onDidRemoveStyleElement",
       "text": null,
-      "snippet": "onDidRemoveStyleElement(${1:callback}, ${2:styleElement})",
+      "snippet": "onDidRemoveStyleElement(${1:callback})",
       "description": "Invoke `callback` when a style element is removed.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/StyleManager#instance-onDidRemoveStyleElement",
       "leftLabel": "Disposable",
@@ -5125,7 +5205,7 @@
     {
       "name": "onDidUpdateStyleElement",
       "text": null,
-      "snippet": "onDidUpdateStyleElement(${1:callback}, ${2:styleElement}, ${3:sourcePath}, ${4:context})",
+      "snippet": "onDidUpdateStyleElement(${1:callback})",
       "description": "Invoke `callback` when an existing style element is updated.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/StyleManager#instance-onDidUpdateStyleElement",
       "leftLabel": "Disposable",
@@ -6686,8 +6766,8 @@
     },
     {
       "name": "groupChangesSinceCheckpoint",
-      "text": "groupChangesSinceCheckpoint()",
-      "snippet": null,
+      "text": null,
+      "snippet": "groupChangesSinceCheckpoint(${1:checkpoint})",
       "description": "Group all changes since the given checkpoint into a single\ntransaction for purposes of undo/redo.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/TextEditor#instance-groupChangesSinceCheckpoint",
       "leftLabel": "Boolean",
@@ -7367,8 +7447,8 @@
     },
     {
       "name": "revertToCheckpoint",
-      "text": "revertToCheckpoint()",
-      "snippet": null,
+      "text": null,
+      "snippet": "revertToCheckpoint(${1:checkpoint})",
       "description": "Revert the buffer to the state it was in when the given\ncheckpoint was created.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/TextEditor#instance-revertToCheckpoint",
       "leftLabel": "Boolean",
@@ -7995,7 +8075,7 @@
     {
       "name": "addBottomPanel",
       "text": null,
-      "snippet": "addBottomPanel(${1:options}, ${2:item}, ${3:visible}, ${4:priority})",
+      "snippet": "addBottomPanel(${1:options})",
       "description": "Adds a panel item to the bottom of the editor window.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Workspace#instance-addBottomPanel",
       "leftLabel": "Panel",
@@ -8004,7 +8084,7 @@
     {
       "name": "addFooterPanel",
       "text": null,
-      "snippet": "addFooterPanel(${1:options}, ${2:item}, ${3:visible}, ${4:priority})",
+      "snippet": "addFooterPanel(${1:options})",
       "description": "Adds a panel item to the footer.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Workspace#instance-addFooterPanel",
       "leftLabel": "Panel",
@@ -8013,7 +8093,7 @@
     {
       "name": "addHeaderPanel",
       "text": null,
-      "snippet": "addHeaderPanel(${1:options}, ${2:item}, ${3:visible}, ${4:priority})",
+      "snippet": "addHeaderPanel(${1:options})",
       "description": "Adds a panel item to the header.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Workspace#instance-addHeaderPanel",
       "leftLabel": "Panel",
@@ -8022,7 +8102,7 @@
     {
       "name": "addLeftPanel",
       "text": null,
-      "snippet": "addLeftPanel(${1:options}, ${2:item}, ${3:visible}, ${4:priority})",
+      "snippet": "addLeftPanel(${1:options})",
       "description": "Adds a panel item to the left of the editor window.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Workspace#instance-addLeftPanel",
       "leftLabel": "Panel",
@@ -8031,7 +8111,7 @@
     {
       "name": "addModalPanel",
       "text": null,
-      "snippet": "addModalPanel(${1:options}, ${2:item}, ${3:visible}, ${4:priority})",
+      "snippet": "addModalPanel(${1:options})",
       "description": "Adds a panel item as a modal dialog.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Workspace#instance-addModalPanel",
       "leftLabel": "Panel",
@@ -8049,7 +8129,7 @@
     {
       "name": "addRightPanel",
       "text": null,
-      "snippet": "addRightPanel(${1:options}, ${2:item}, ${3:visible}, ${4:priority})",
+      "snippet": "addRightPanel(${1:options})",
       "description": "Adds a panel item to the right of the editor window.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Workspace#instance-addRightPanel",
       "leftLabel": "Panel",
@@ -8058,7 +8138,7 @@
     {
       "name": "addTopPanel",
       "text": null,
-      "snippet": "addTopPanel(${1:options}, ${2:item}, ${3:visible}, ${4:priority})",
+      "snippet": "addTopPanel(${1:options})",
       "description": "Adds a panel item to the top of the editor window above the tabs.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Workspace#instance-addTopPanel",
       "leftLabel": "Panel",
@@ -8254,7 +8334,7 @@
     {
       "name": "observeActivePane",
       "text": null,
-      "snippet": "observeActivePane(${1:callback}, ${2:pane})",
+      "snippet": "observeActivePane(${1:callback})",
       "description": "Invoke the given callback with the current active pane and when\nthe active pane changes.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Workspace#instance-observeActivePane",
       "leftLabel": "Disposable",
@@ -8263,7 +8343,7 @@
     {
       "name": "observeActivePaneItem",
       "text": null,
-      "snippet": "observeActivePaneItem(${1:callback}, ${2:item})",
+      "snippet": "observeActivePaneItem(${1:callback})",
       "description": "Invoke the given callback with the current active pane item and\nwith all future active pane items in the workspace.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Workspace#instance-observeActivePaneItem",
       "leftLabel": "Disposable",
@@ -8272,7 +8352,7 @@
     {
       "name": "observeActiveTextEditor",
       "text": null,
-      "snippet": "observeActiveTextEditor(${1:callback}, ${2:editor})",
+      "snippet": "observeActiveTextEditor(${1:callback})",
       "description": "Invoke the given callback with the current active text editor\n(if any), with all future active text editors, and when there is no longer\nan active text editor.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Workspace#instance-observeActiveTextEditor",
       "leftLabel": "Disposable",
@@ -8281,7 +8361,7 @@
     {
       "name": "observePaneItems",
       "text": null,
-      "snippet": "observePaneItems(${1:callback}, ${2:item})",
+      "snippet": "observePaneItems(${1:callback})",
       "description": "Invoke the given callback with all current and future panes items\nin the workspace.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Workspace#instance-observePaneItems",
       "leftLabel": "Disposable",
@@ -8290,7 +8370,7 @@
     {
       "name": "observePanes",
       "text": null,
-      "snippet": "observePanes(${1:callback}, ${2:pane})",
+      "snippet": "observePanes(${1:callback})",
       "description": "Invoke the given callback with all current and future panes in the\nworkspace.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Workspace#instance-observePanes",
       "leftLabel": "Disposable",
@@ -8299,7 +8379,7 @@
     {
       "name": "observeTextEditors",
       "text": null,
-      "snippet": "observeTextEditors(${1:callback}, ${2:editor})",
+      "snippet": "observeTextEditors(${1:callback})",
       "description": "Invoke the given callback with all current and future text\neditors in the workspace.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Workspace#instance-observeTextEditors",
       "leftLabel": "Disposable",
@@ -8308,7 +8388,7 @@
     {
       "name": "onDidAddPane",
       "text": null,
-      "snippet": "onDidAddPane(${1:callback}, ${2:event}, ${3:pane})",
+      "snippet": "onDidAddPane(${1:callback})",
       "description": "Invoke the given callback when a pane is added to the workspace.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Workspace#instance-onDidAddPane",
       "leftLabel": "Disposable",
@@ -8317,7 +8397,7 @@
     {
       "name": "onDidAddPaneItem",
       "text": null,
-      "snippet": "onDidAddPaneItem(${1:callback}, ${2:event}, ${3:item}, ${4:pane}, ${5:index})",
+      "snippet": "onDidAddPaneItem(${1:callback})",
       "description": "Invoke the given callback when a pane item is added to the\nworkspace.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Workspace#instance-onDidAddPaneItem",
       "leftLabel": "Disposable",
@@ -8326,7 +8406,7 @@
     {
       "name": "onDidAddTextEditor",
       "text": null,
-      "snippet": "onDidAddTextEditor(${1:callback}, ${2:event}, ${3:textEditor}, ${4:pane}, ${5:index})",
+      "snippet": "onDidAddTextEditor(${1:callback})",
       "description": "Invoke the given callback when a text editor is added to the\nworkspace.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Workspace#instance-onDidAddTextEditor",
       "leftLabel": "Disposable",
@@ -8335,7 +8415,7 @@
     {
       "name": "onDidChangeActivePane",
       "text": null,
-      "snippet": "onDidChangeActivePane(${1:callback}, ${2:pane})",
+      "snippet": "onDidChangeActivePane(${1:callback})",
       "description": "Invoke the given callback when the active pane changes.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Workspace#instance-onDidChangeActivePane",
       "leftLabel": "Disposable",
@@ -8344,7 +8424,7 @@
     {
       "name": "onDidChangeActivePaneItem",
       "text": null,
-      "snippet": "onDidChangeActivePaneItem(${1:callback}, ${2:item})",
+      "snippet": "onDidChangeActivePaneItem(${1:callback})",
       "description": "Invoke the given callback when the active pane item changes.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Workspace#instance-onDidChangeActivePaneItem",
       "leftLabel": "Disposable",
@@ -8353,7 +8433,7 @@
     {
       "name": "onDidChangeActiveTextEditor",
       "text": null,
-      "snippet": "onDidChangeActiveTextEditor(${1:callback}, ${2:editor})",
+      "snippet": "onDidChangeActiveTextEditor(${1:callback})",
       "description": "Invoke the given callback when a text editor becomes the active\ntext editor and when there is no longer an active text editor.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Workspace#instance-onDidChangeActiveTextEditor",
       "leftLabel": "Disposable",
@@ -8362,7 +8442,7 @@
     {
       "name": "onDidDestroyPane",
       "text": null,
-      "snippet": "onDidDestroyPane(${1:callback}, ${2:event}, ${3:pane})",
+      "snippet": "onDidDestroyPane(${1:callback})",
       "description": "Invoke the given callback when a pane is destroyed in the\nworkspace.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Workspace#instance-onDidDestroyPane",
       "leftLabel": "Disposable",
@@ -8371,7 +8451,7 @@
     {
       "name": "onDidDestroyPaneItem",
       "text": null,
-      "snippet": "onDidDestroyPaneItem(${1:callback}, ${2:event}, ${3:item}, ${4:pane}, ${5:index})",
+      "snippet": "onDidDestroyPaneItem(${1:callback})",
       "description": "Invoke the given callback when a pane item is destroyed.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Workspace#instance-onDidDestroyPaneItem",
       "leftLabel": "Disposable",
@@ -8380,7 +8460,7 @@
     {
       "name": "onDidOpen",
       "text": null,
-      "snippet": "onDidOpen(${1:callback}, ${2:event}, ${3:uri}, ${4:item}, ${5:pane}, ${6:index})",
+      "snippet": "onDidOpen(${1:callback})",
       "description": "Invoke the given callback whenever an item is opened. Unlike\n{::onDidAddPaneItem}, observers will be notified for items that are already\npresent in the workspace when they are reopened.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Workspace#instance-onDidOpen",
       "leftLabel": "Disposable",
@@ -8389,7 +8469,7 @@
     {
       "name": "onDidStopChangingActivePaneItem",
       "text": null,
-      "snippet": "onDidStopChangingActivePaneItem(${1:callback}, ${2:item})",
+      "snippet": "onDidStopChangingActivePaneItem(${1:callback})",
       "description": "Invoke the given callback when the active pane item stops\nchanging.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Workspace#instance-onDidStopChangingActivePaneItem",
       "leftLabel": "Disposable",
@@ -8398,7 +8478,7 @@
     {
       "name": "onWillDestroyPane",
       "text": null,
-      "snippet": "onWillDestroyPane(${1:callback}, ${2:event}, ${3:pane})",
+      "snippet": "onWillDestroyPane(${1:callback})",
       "description": "Invoke the given callback before a pane is destroyed in the\nworkspace.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Workspace#instance-onWillDestroyPane",
       "leftLabel": "Disposable",
@@ -8407,7 +8487,7 @@
     {
       "name": "onWillDestroyPaneItem",
       "text": null,
-      "snippet": "onWillDestroyPaneItem(${1:callback}, ${2:event}, ${3:item}, ${4:pane}, ${5:index})",
+      "snippet": "onWillDestroyPaneItem(${1:callback})",
       "description": "Invoke the given callback when a pane item is about to be\ndestroyed, before the user is prompted to save it.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Workspace#instance-onWillDestroyPaneItem",
       "leftLabel": "Disposable",
@@ -8416,7 +8496,7 @@
     {
       "name": "open",
       "text": null,
-      "snippet": "open(${1:uri}, ${2:options}, ${3:initialLine}, ${4:initialColumn}, ${5:split}, ${6:activatePane}, ${7:activateItem}, ${8:pending}, ${9:searchAllPanes}, ${10:location})",
+      "snippet": "open(${1:uri}, ${2:options})",
       "description": "Opens the given URI in Atom asynchronously.\nIf the URI is already open, the existing item for that URI will be\nactivated. If no URI is given, or no registered opener can open\nthe URI, a new empty {TextEditor} will be created.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Workspace#instance-open",
       "leftLabel": "Promise",
@@ -8479,7 +8559,7 @@
     {
       "name": "replace",
       "text": null,
-      "snippet": "replace(${1:regex}, ${2:replacementText}, ${3:filePaths}, ${4:iterator}, ${5:options})",
+      "snippet": "replace(${1:regex}, ${2:replacementText}, ${3:filePaths}, ${4:iterator})",
       "description": "Performs a replace across all the specified files in the project.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Workspace#instance-replace",
       "leftLabel": "Promise",
@@ -8488,7 +8568,7 @@
     {
       "name": "scan",
       "text": null,
-      "snippet": "scan(${1:regex}, ${2:options}, ${3:paths}, ${4:onPathsSearched}, ${5:leadingContextLineCount}, ${6:trailingContextLineCount}, ${7:iterator})",
+      "snippet": "scan(${1:regex}, ${2:options}, ${3:iterator})",
       "description": "Performs a search across all files in the workspace.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Workspace#instance-scan",
       "leftLabel": "Promise",
@@ -8578,7 +8658,7 @@
     {
       "name": "observeActivePane",
       "text": null,
-      "snippet": "observeActivePane(${1:callback}, ${2:pane})",
+      "snippet": "observeActivePane(${1:callback})",
       "description": "Invoke the given callback with the current active pane and when\nthe active pane changes.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/WorkspaceCenter#instance-observeActivePane",
       "leftLabel": "Disposable",
@@ -8587,7 +8667,7 @@
     {
       "name": "observeActivePaneItem",
       "text": null,
-      "snippet": "observeActivePaneItem(${1:callback}, ${2:item})",
+      "snippet": "observeActivePaneItem(${1:callback})",
       "description": "Invoke the given callback with the current active pane item and\nwith all future active pane items in the workspace center.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/WorkspaceCenter#instance-observeActivePaneItem",
       "leftLabel": "Disposable",
@@ -8596,7 +8676,7 @@
     {
       "name": "observePaneItems",
       "text": null,
-      "snippet": "observePaneItems(${1:callback}, ${2:item})",
+      "snippet": "observePaneItems(${1:callback})",
       "description": "Invoke the given callback with all current and future panes items\nin the workspace center.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/WorkspaceCenter#instance-observePaneItems",
       "leftLabel": "Disposable",
@@ -8605,7 +8685,7 @@
     {
       "name": "observePanes",
       "text": null,
-      "snippet": "observePanes(${1:callback}, ${2:pane})",
+      "snippet": "observePanes(${1:callback})",
       "description": "Invoke the given callback with all current and future panes in the\nworkspace center.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/WorkspaceCenter#instance-observePanes",
       "leftLabel": "Disposable",
@@ -8614,7 +8694,7 @@
     {
       "name": "observeTextEditors",
       "text": null,
-      "snippet": "observeTextEditors(${1:callback}, ${2:editor})",
+      "snippet": "observeTextEditors(${1:callback})",
       "description": "Invoke the given callback with all current and future text\neditors in the workspace center.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/WorkspaceCenter#instance-observeTextEditors",
       "leftLabel": "Disposable",
@@ -8623,7 +8703,7 @@
     {
       "name": "onDidAddPane",
       "text": null,
-      "snippet": "onDidAddPane(${1:callback}, ${2:event}, ${3:pane})",
+      "snippet": "onDidAddPane(${1:callback})",
       "description": "Invoke the given callback when a pane is added to the workspace\ncenter.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/WorkspaceCenter#instance-onDidAddPane",
       "leftLabel": "Disposable",
@@ -8632,7 +8712,7 @@
     {
       "name": "onDidAddPaneItem",
       "text": null,
-      "snippet": "onDidAddPaneItem(${1:callback}, ${2:event}, ${3:item}, ${4:pane}, ${5:index})",
+      "snippet": "onDidAddPaneItem(${1:callback})",
       "description": "Invoke the given callback when a pane item is added to the\nworkspace center.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/WorkspaceCenter#instance-onDidAddPaneItem",
       "leftLabel": "Disposable",
@@ -8641,7 +8721,7 @@
     {
       "name": "onDidAddTextEditor",
       "text": null,
-      "snippet": "onDidAddTextEditor(${1:callback}, ${2:event}, ${3:textEditor}, ${4:pane}, ${5:index})",
+      "snippet": "onDidAddTextEditor(${1:callback})",
       "description": "Invoke the given callback when a text editor is added to the\nworkspace center.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/WorkspaceCenter#instance-onDidAddTextEditor",
       "leftLabel": "Disposable",
@@ -8650,7 +8730,7 @@
     {
       "name": "onDidChangeActivePane",
       "text": null,
-      "snippet": "onDidChangeActivePane(${1:callback}, ${2:pane})",
+      "snippet": "onDidChangeActivePane(${1:callback})",
       "description": "Invoke the given callback when the active pane changes.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/WorkspaceCenter#instance-onDidChangeActivePane",
       "leftLabel": "Disposable",
@@ -8659,7 +8739,7 @@
     {
       "name": "onDidChangeActivePaneItem",
       "text": null,
-      "snippet": "onDidChangeActivePaneItem(${1:callback}, ${2:item})",
+      "snippet": "onDidChangeActivePaneItem(${1:callback})",
       "description": "Invoke the given callback when the active pane item changes.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/WorkspaceCenter#instance-onDidChangeActivePaneItem",
       "leftLabel": "Disposable",
@@ -8668,7 +8748,7 @@
     {
       "name": "onDidDestroyPane",
       "text": null,
-      "snippet": "onDidDestroyPane(${1:callback}, ${2:event}, ${3:pane})",
+      "snippet": "onDidDestroyPane(${1:callback})",
       "description": "Invoke the given callback when a pane is destroyed in the\nworkspace center.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/WorkspaceCenter#instance-onDidDestroyPane",
       "leftLabel": "Disposable",
@@ -8677,7 +8757,7 @@
     {
       "name": "onDidDestroyPaneItem",
       "text": null,
-      "snippet": "onDidDestroyPaneItem(${1:callback}, ${2:event}, ${3:item}, ${4:pane}, ${5:index})",
+      "snippet": "onDidDestroyPaneItem(${1:callback})",
       "description": "Invoke the given callback when a pane item is destroyed.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/WorkspaceCenter#instance-onDidDestroyPaneItem",
       "leftLabel": "Disposable",
@@ -8686,7 +8766,7 @@
     {
       "name": "onDidStopChangingActivePaneItem",
       "text": null,
-      "snippet": "onDidStopChangingActivePaneItem(${1:callback}, ${2:item})",
+      "snippet": "onDidStopChangingActivePaneItem(${1:callback})",
       "description": "Invoke the given callback when the active pane item stops\nchanging.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/WorkspaceCenter#instance-onDidStopChangingActivePaneItem",
       "leftLabel": "Disposable",
@@ -8695,7 +8775,7 @@
     {
       "name": "onWillDestroyPane",
       "text": null,
-      "snippet": "onWillDestroyPane(${1:callback}, ${2:event}, ${3:pane})",
+      "snippet": "onWillDestroyPane(${1:callback})",
       "description": "Invoke the given callback before a pane is destroyed in the\nworkspace center.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/WorkspaceCenter#instance-onWillDestroyPane",
       "leftLabel": "Disposable",
@@ -8704,7 +8784,7 @@
     {
       "name": "onWillDestroyPaneItem",
       "text": null,
-      "snippet": "onWillDestroyPaneItem(${1:callback}, ${2:event}, ${3:item}, ${4:pane}, ${5:index})",
+      "snippet": "onWillDestroyPaneItem(${1:callback})",
       "description": "Invoke the given callback when a pane item is about to be\ndestroyed, before the user is prompted to save it.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/WorkspaceCenter#instance-onWillDestroyPaneItem",
       "leftLabel": "Disposable",
