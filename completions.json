@@ -3216,7 +3216,7 @@
       "name": "dismiss",
       "text": "dismiss()",
       "snippet": null,
-      "description": "Dismisses the notification, removing it from the UI. Calling this programmatically\nwill call all callbacks added via `onDidDismiss`. ",
+      "description": "Dismisses the notification, removing it from the UI. Calling this\nprogrammatically will call all callbacks added via `onDidDismiss`.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Notification#instance-dismiss",
       "type": "method"
     },
@@ -3264,6 +3264,7 @@
       "snippet": "addError(${1:message}, ${2:options})",
       "description": "Add an error notification.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/NotificationManager#instance-addError",
+      "leftLabel": "Notification",
       "type": "method"
     },
     {
@@ -3272,6 +3273,7 @@
       "snippet": "addFatalError(${1:message}, ${2:options})",
       "description": "Add a fatal error notification.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/NotificationManager#instance-addFatalError",
+      "leftLabel": "Notification",
       "type": "method"
     },
     {
@@ -3280,6 +3282,7 @@
       "snippet": "addInfo(${1:message}, ${2:options})",
       "description": "Add an informational notification.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/NotificationManager#instance-addInfo",
+      "leftLabel": "Notification",
       "type": "method"
     },
     {
@@ -3288,6 +3291,7 @@
       "snippet": "addSuccess(${1:message}, ${2:options})",
       "description": "Add a success notification.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/NotificationManager#instance-addSuccess",
+      "leftLabel": "Notification",
       "type": "method"
     },
     {
@@ -3296,6 +3300,7 @@
       "snippet": "addWarning(${1:message}, ${2:options})",
       "description": "Add a warning notification.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/NotificationManager#instance-addWarning",
+      "leftLabel": "Notification",
       "type": "method"
     },
     {
@@ -3574,7 +3579,7 @@
       "name": "activate",
       "text": "activate()",
       "snippet": null,
-      "description": "Makes this pane the *active* pane, causing it to gain focus. ",
+      "description": "Makes this pane the *active* pane, causing it to gain focus.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Pane#instance-activate",
       "type": "method"
     },
@@ -3607,7 +3612,7 @@
       "name": "activateNextItem",
       "text": "activateNextItem()",
       "snippet": null,
-      "description": "Makes the next item active. ",
+      "description": "Makes the next item active.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Pane#instance-activateNextItem",
       "type": "method"
     },
@@ -3615,7 +3620,7 @@
       "name": "activatePreviousItem",
       "text": "activatePreviousItem()",
       "snippet": null,
-      "description": "Makes the previous item active. ",
+      "description": "Makes the previous item active.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Pane#instance-activatePreviousItem",
       "type": "method"
     },
@@ -3649,15 +3654,16 @@
       "name": "destroyActiveItem",
       "text": "destroyActiveItem()",
       "snippet": null,
-      "description": "Destroy the active item and activate the next item. ",
+      "description": "Destroy the active item and activate the next item.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Pane#instance-destroyActiveItem",
+      "leftLabel": "Promise",
       "type": "method"
     },
     {
       "name": "destroyInactiveItems",
       "text": "destroyInactiveItems()",
       "snippet": null,
-      "description": "Destroy all items except for the active item. ",
+      "description": "Destroy all items except for the active item.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Pane#instance-destroyInactiveItems",
       "type": "method"
     },
@@ -3674,7 +3680,7 @@
       "name": "destroyItems",
       "text": "destroyItems()",
       "snippet": null,
-      "description": "Destroy all items. ",
+      "description": "Destroy all items.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Pane#instance-destroyItems",
       "type": "method"
     },
@@ -3752,7 +3758,7 @@
       "name": "moveItemLeft",
       "text": "moveItemLeft()",
       "snippet": null,
-      "description": "Move the active tab to the left ",
+      "description": "Move the active tab to the left",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Pane#instance-moveItemLeft",
       "type": "method"
     },
@@ -3760,7 +3766,7 @@
       "name": "moveItemRight",
       "text": "moveItemRight()",
       "snippet": null,
-      "description": "Move the active tab to the right. ",
+      "description": "Move the active tab to the right.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Pane#instance-moveItemRight",
       "type": "method"
     },
@@ -3937,7 +3943,7 @@
       "name": "saveActiveItem",
       "text": "saveActiveItem()",
       "snippet": null,
-      "description": "Save the active item. ",
+      "description": "Save the active item.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Pane#instance-saveActiveItem",
       "type": "method"
     },
@@ -3971,7 +3977,7 @@
       "name": "saveItems",
       "text": "saveItems()",
       "snippet": null,
-      "description": "Save all items. ",
+      "description": "Save all items.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Pane#instance-saveItems",
       "type": "method"
     },
@@ -4266,7 +4272,7 @@
     {
       "name": "addPath",
       "text": null,
-      "snippet": "addPath(${1:projectPath})",
+      "snippet": "addPath(${1:projectPath}, ${2:options})",
       "description": "Add a path to the project's list of root paths",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Project#instance-addPath",
       "type": "method"
@@ -4378,7 +4384,7 @@
     {
       "name": "setPaths",
       "text": null,
-      "snippet": "setPaths(${1:projectPaths})",
+      "snippet": "setPaths(${1:projectPaths}, ${2:options})",
       "description": "Set the paths of the project's directories.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Project#instance-setPaths",
       "type": "method"
