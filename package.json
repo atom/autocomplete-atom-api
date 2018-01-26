@@ -1,6 +1,6 @@
 {
   "name": "autocomplete-atom-api",
-  "version": "0.10.6",
+  "version": "0.10.7",
   "description": "Atom API autocompletions",
   "main": "./lib/main",
   "license": "MIT",
