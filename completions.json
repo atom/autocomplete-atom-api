@@ -726,7 +726,7 @@
       "name": "clearSelection",
       "text": "clearSelection()",
       "snippet": null,
-      "description": "Deselects the current selection. ",
+      "description": "Deselects the current selection.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Cursor#instance-clearSelection",
       "type": "method"
     },
@@ -778,7 +778,7 @@
       "name": "getBufferRow",
       "text": "getBufferRow()",
       "snippet": null,
-      "description": "Retrieves the cursor's current buffer row. ",
+      "description": "Retrieves the cursor's current buffer row.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Cursor#instance-getBufferRow",
       "type": "method"
     },
@@ -999,7 +999,7 @@
       "name": "moveToBeginningOfLine",
       "text": "moveToBeginningOfLine()",
       "snippet": null,
-      "description": "Moves the cursor to the beginning of the buffer line. ",
+      "description": "Moves the cursor to the beginning of the buffer line.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Cursor#instance-moveToBeginningOfLine",
       "type": "method"
     },
@@ -1007,7 +1007,7 @@
       "name": "moveToBeginningOfNextParagraph",
       "text": "moveToBeginningOfNextParagraph()",
       "snippet": null,
-      "description": "Moves the cursor to the beginning of the next paragraph ",
+      "description": "Moves the cursor to the beginning of the next paragraph",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Cursor#instance-moveToBeginningOfNextParagraph",
       "type": "method"
     },
@@ -1015,7 +1015,7 @@
       "name": "moveToBeginningOfNextWord",
       "text": "moveToBeginningOfNextWord()",
       "snippet": null,
-      "description": "Moves the cursor to the beginning of the next word. ",
+      "description": "Moves the cursor to the beginning of the next word.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Cursor#instance-moveToBeginningOfNextWord",
       "type": "method"
     },
@@ -1023,7 +1023,7 @@
       "name": "moveToBeginningOfPreviousParagraph",
       "text": "moveToBeginningOfPreviousParagraph()",
       "snippet": null,
-      "description": "Moves the cursor to the beginning of the previous paragraph ",
+      "description": "Moves the cursor to the beginning of the previous paragraph",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Cursor#instance-moveToBeginningOfPreviousParagraph",
       "type": "method"
     },
@@ -1031,7 +1031,7 @@
       "name": "moveToBeginningOfScreenLine",
       "text": "moveToBeginningOfScreenLine()",
       "snippet": null,
-      "description": "Moves the cursor to the beginning of the line. ",
+      "description": "Moves the cursor to the beginning of the line.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Cursor#instance-moveToBeginningOfScreenLine",
       "type": "method"
     },
@@ -1039,7 +1039,7 @@
       "name": "moveToBeginningOfWord",
       "text": "moveToBeginningOfWord()",
       "snippet": null,
-      "description": "Moves the cursor to the beginning of the word. ",
+      "description": "Moves the cursor to the beginning of the word.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Cursor#instance-moveToBeginningOfWord",
       "type": "method"
     },
@@ -1047,7 +1047,7 @@
       "name": "moveToBottom",
       "text": "moveToBottom()",
       "snippet": null,
-      "description": "Moves the cursor to the bottom of the buffer. ",
+      "description": "Moves the cursor to the bottom of the buffer.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Cursor#instance-moveToBottom",
       "type": "method"
     },
@@ -1055,7 +1055,7 @@
       "name": "moveToEndOfLine",
       "text": "moveToEndOfLine()",
       "snippet": null,
-      "description": "Moves the cursor to the end of the buffer line. ",
+      "description": "Moves the cursor to the end of the buffer line.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Cursor#instance-moveToEndOfLine",
       "type": "method"
     },
@@ -1063,7 +1063,7 @@
       "name": "moveToEndOfScreenLine",
       "text": "moveToEndOfScreenLine()",
       "snippet": null,
-      "description": "Moves the cursor to the end of the line. ",
+      "description": "Moves the cursor to the end of the line.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Cursor#instance-moveToEndOfScreenLine",
       "type": "method"
     },
@@ -1071,7 +1071,7 @@
       "name": "moveToEndOfWord",
       "text": "moveToEndOfWord()",
       "snippet": null,
-      "description": "Moves the cursor to the end of the word. ",
+      "description": "Moves the cursor to the end of the word.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Cursor#instance-moveToEndOfWord",
       "type": "method"
     },
@@ -1079,7 +1079,7 @@
       "name": "moveToFirstCharacterOfLine",
       "text": "moveToFirstCharacterOfLine()",
       "snippet": null,
-      "description": "Moves the cursor to the beginning of the first character in the\nline. ",
+      "description": "Moves the cursor to the beginning of the first character in the\nline.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Cursor#instance-moveToFirstCharacterOfLine",
       "type": "method"
     },
@@ -1087,7 +1087,7 @@
       "name": "moveToNextSubwordBoundary",
       "text": "moveToNextSubwordBoundary()",
       "snippet": null,
-      "description": "Moves the cursor to the next subword boundary. ",
+      "description": "Moves the cursor to the next subword boundary.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Cursor#instance-moveToNextSubwordBoundary",
       "type": "method"
     },
@@ -1095,7 +1095,7 @@
       "name": "moveToNextWordBoundary",
       "text": "moveToNextWordBoundary()",
       "snippet": null,
-      "description": "Moves the cursor to the next word boundary. ",
+      "description": "Moves the cursor to the next word boundary.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Cursor#instance-moveToNextWordBoundary",
       "type": "method"
     },
@@ -1103,7 +1103,7 @@
       "name": "moveToPreviousSubwordBoundary",
       "text": "moveToPreviousSubwordBoundary()",
       "snippet": null,
-      "description": "Moves the cursor to the previous subword boundary. ",
+      "description": "Moves the cursor to the previous subword boundary.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Cursor#instance-moveToPreviousSubwordBoundary",
       "type": "method"
     },
@@ -1111,7 +1111,7 @@
       "name": "moveToPreviousWordBoundary",
       "text": "moveToPreviousWordBoundary()",
       "snippet": null,
-      "description": "Moves the cursor to the previous word boundary. ",
+      "description": "Moves the cursor to the previous word boundary.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Cursor#instance-moveToPreviousWordBoundary",
       "type": "method"
     },
@@ -1119,7 +1119,7 @@
       "name": "moveToTop",
       "text": "moveToTop()",
       "snippet": null,
-      "description": "Moves the cursor to the top of the buffer. ",
+      "description": "Moves the cursor to the top of the buffer.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Cursor#instance-moveToTop",
       "type": "method"
     },
@@ -1169,7 +1169,7 @@
       "name": "skipLeadingWhitespace",
       "text": "skipLeadingWhitespace()",
       "snippet": null,
-      "description": "Moves the cursor to the beginning of the buffer line, skipping all\nwhitespace. ",
+      "description": "Moves the cursor to the beginning of the buffer line, skipping all\nwhitespace.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Cursor#instance-skipLeadingWhitespace",
       "type": "method"
     },
@@ -1205,7 +1205,7 @@
       "name": "getId",
       "text": "getId()",
       "snippet": null,
-      "description": "An id unique across all {Decoration} objects ",
+      "description": "An id unique across all {Decoration} objects",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Decoration#instance-getId",
       "type": "method"
     },
@@ -1225,6 +1225,15 @@
       "description": "",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Decoration#instance-getProperties",
       "leftLabel": "Decoration",
+      "type": "method"
+    },
+    {
+      "name": "isType",
+      "text": null,
+      "snippet": "isType(${1:type})",
+      "description": "Check if this decoration is of type `type`",
+      "descriptionMoreURL": "https://atom.io/docs/api/latest/Decoration#instance-isType",
+      "leftLabel": "Boolean",
       "type": "method"
     },
     {
@@ -2761,6 +2770,15 @@
       "type": "method"
     },
     {
+      "name": "onDidRemoveGrammar",
+      "text": null,
+      "snippet": "onDidRemoveGrammar(${1:callback})",
+      "description": "Invoke the given callback when a grammar is removed from the registry.",
+      "descriptionMoreURL": "https://atom.io/docs/api/latest/GrammarRegistry#instance-onDidRemoveGrammar",
+      "leftLabel": "Disposable",
+      "type": "method"
+    },
+    {
       "name": "onDidUpdateGrammar",
       "text": null,
       "snippet": "onDidUpdateGrammar(${1:callback})",
@@ -2811,7 +2829,7 @@
       "name": "destroy",
       "text": "destroy()",
       "snippet": null,
-      "description": "Destroys the gutter. ",
+      "description": "Destroys the gutter.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Gutter#instance-destroy",
       "type": "method"
     },
@@ -2819,7 +2837,7 @@
       "name": "hide",
       "text": "hide()",
       "snippet": null,
-      "description": "Hide the gutter. ",
+      "description": "Hide the gutter.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Gutter#instance-hide",
       "type": "method"
     },
@@ -2854,7 +2872,7 @@
       "name": "show",
       "text": "show()",
       "snippet": null,
-      "description": "Show the gutter. ",
+      "description": "Show the gutter.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Gutter#instance-show",
       "type": "method"
     }
@@ -4290,7 +4308,7 @@
       "name": "getDirectories",
       "text": "getDirectories()",
       "snippet": null,
-      "description": "Get an {Array} of {Directory}s associated with this project. ",
+      "description": "Get an {Array} of {Directory}s associated with this project.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Project#instance-getDirectories",
       "type": "method"
     },
@@ -4298,7 +4316,7 @@
       "name": "getPaths",
       "text": "getPaths()",
       "snippet": null,
-      "description": "Get an {Array} of {String}s containing the paths of the project's\ndirectories. ",
+      "description": "Get an {Array} of {String}s containing the paths of the project's\ndirectories.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Project#instance-getPaths",
       "type": "method"
     },
@@ -4620,7 +4638,7 @@
       "name": "addSelectionAbove",
       "text": "addSelectionAbove()",
       "snippet": null,
-      "description": "Moves the selection up one row. ",
+      "description": "Moves the selection up one row.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Selection#instance-addSelectionAbove",
       "type": "method"
     },
@@ -4628,7 +4646,7 @@
       "name": "addSelectionBelow",
       "text": "addSelectionBelow()",
       "snippet": null,
-      "description": "Moves the selection down one row. ",
+      "description": "Moves the selection down one row.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Selection#instance-addSelectionBelow",
       "type": "method"
     },
@@ -4636,7 +4654,7 @@
       "name": "autoIndentSelectedRows",
       "text": "autoIndentSelectedRows()",
       "snippet": null,
-      "description": "Sets the indentation level of all selected rows to values suggested\nby the relevant grammars. ",
+      "description": "Sets the indentation level of all selected rows to values suggested\nby the relevant grammars.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Selection#instance-autoIndentSelectedRows",
       "type": "method"
     },
@@ -4644,7 +4662,7 @@
       "name": "backspace",
       "text": "backspace()",
       "snippet": null,
-      "description": "Removes the first character before the selection if the selection\nis empty otherwise it deletes the selection. ",
+      "description": "Removes the first character before the selection if the selection\nis empty otherwise it deletes the selection.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Selection#instance-backspace",
       "type": "method"
     },
@@ -4684,7 +4702,7 @@
       "name": "cutToEndOfBufferLine",
       "text": "cutToEndOfBufferLine()",
       "snippet": null,
-      "description": "Cuts the selection until the end of the buffer line. ",
+      "description": "Cuts the selection until the end of the buffer line.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Selection#instance-cutToEndOfBufferLine",
       "type": "method"
     },
@@ -4692,7 +4710,7 @@
       "name": "cutToEndOfLine",
       "text": "cutToEndOfLine()",
       "snippet": null,
-      "description": "Cuts the selection until the end of the screen line. ",
+      "description": "Cuts the selection until the end of the screen line.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Selection#instance-cutToEndOfLine",
       "type": "method"
     },
@@ -4700,7 +4718,7 @@
       "name": "delete",
       "text": "delete()",
       "snippet": null,
-      "description": "Removes the selection or the next character after the start of the\nselection if the selection is empty. ",
+      "description": "Removes the selection or the next character after the start of the\nselection if the selection is empty.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Selection#instance-delete",
       "type": "method"
     },
@@ -4708,7 +4726,7 @@
       "name": "deleteLine",
       "text": "deleteLine()",
       "snippet": null,
-      "description": "Removes the line at the beginning of the selection if the selection\nis empty unless the selection spans multiple lines in which case all lines\nare removed. ",
+      "description": "Removes the line at the beginning of the selection if the selection\nis empty unless the selection spans multiple lines in which case all lines\nare removed.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Selection#instance-deleteLine",
       "type": "method"
     },
@@ -4716,7 +4734,7 @@
       "name": "deleteSelectedText",
       "text": "deleteSelectedText()",
       "snippet": null,
-      "description": "Removes only the selected text. ",
+      "description": "Removes only the selected text.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Selection#instance-deleteSelectedText",
       "type": "method"
     },
@@ -4724,7 +4742,7 @@
       "name": "deleteToBeginningOfLine",
       "text": "deleteToBeginningOfLine()",
       "snippet": null,
-      "description": "Removes from the beginning of the line which the selection begins on\nall the way through to the end of the selection. ",
+      "description": "Removes from the beginning of the line which the selection begins on\nall the way through to the end of the selection.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Selection#instance-deleteToBeginningOfLine",
       "type": "method"
     },
@@ -4732,7 +4750,7 @@
       "name": "deleteToBeginningOfSubword",
       "text": "deleteToBeginningOfSubword()",
       "snippet": null,
-      "description": "Removes the selection or all characters from the start of the\nselection to the end of the current word if nothing is selected. ",
+      "description": "Removes the selection or all characters from the start of the\nselection to the end of the current word if nothing is selected.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Selection#instance-deleteToBeginningOfSubword",
       "type": "method"
     },
@@ -4740,7 +4758,7 @@
       "name": "deleteToBeginningOfWord",
       "text": "deleteToBeginningOfWord()",
       "snippet": null,
-      "description": "Removes from the start of the selection to the beginning of the\ncurrent word if the selection is empty otherwise it deletes the selection. ",
+      "description": "Removes from the start of the selection to the beginning of the\ncurrent word if the selection is empty otherwise it deletes the selection.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Selection#instance-deleteToBeginningOfWord",
       "type": "method"
     },
@@ -4748,7 +4766,7 @@
       "name": "deleteToEndOfLine",
       "text": "deleteToEndOfLine()",
       "snippet": null,
-      "description": "If the selection is empty, removes all text from the cursor to the\nend of the line. If the cursor is already at the end of the line, it\nremoves the following newline. If the selection isn't empty, only deletes\nthe contents of the selection. ",
+      "description": "If the selection is empty, removes all text from the cursor to the\nend of the line. If the cursor is already at the end of the line, it\nremoves the following newline. If the selection isn't empty, only deletes\nthe contents of the selection.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Selection#instance-deleteToEndOfLine",
       "type": "method"
     },
@@ -4756,7 +4774,7 @@
       "name": "deleteToEndOfSubword",
       "text": "deleteToEndOfSubword()",
       "snippet": null,
-      "description": "Removes the selection or all characters from the start of the\nselection to the end of the current word if nothing is selected. ",
+      "description": "Removes the selection or all characters from the start of the\nselection to the end of the current word if nothing is selected.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Selection#instance-deleteToEndOfSubword",
       "type": "method"
     },
@@ -4764,7 +4782,7 @@
       "name": "deleteToEndOfWord",
       "text": "deleteToEndOfWord()",
       "snippet": null,
-      "description": "Removes the selection or all characters from the start of the\nselection to the end of the current word if nothing is selected. ",
+      "description": "Removes the selection or all characters from the start of the\nselection to the end of the current word if nothing is selected.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Selection#instance-deleteToEndOfWord",
       "type": "method"
     },
@@ -4772,7 +4790,7 @@
       "name": "deleteToNextWordBoundary",
       "text": "deleteToNextWordBoundary()",
       "snippet": null,
-      "description": "Removes the selection or, if nothing is selected, then all\ncharacters from the start of the selection up to the next word\nboundary. ",
+      "description": "Removes the selection or, if nothing is selected, then all\ncharacters from the start of the selection up to the next word\nboundary.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Selection#instance-deleteToNextWordBoundary",
       "type": "method"
     },
@@ -4780,7 +4798,7 @@
       "name": "deleteToPreviousWordBoundary",
       "text": "deleteToPreviousWordBoundary()",
       "snippet": null,
-      "description": "Removes the selection or, if nothing is selected, then all\ncharacters from the start of the selection back to the previous word\nboundary. ",
+      "description": "Removes the selection or, if nothing is selected, then all\ncharacters from the start of the selection back to the previous word\nboundary.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Selection#instance-deleteToPreviousWordBoundary",
       "type": "method"
     },
@@ -4796,7 +4814,7 @@
       "name": "expandOverWord",
       "text": "expandOverWord()",
       "snippet": null,
-      "description": "Expands the newest selection to include the entire word on which\nthe cursors rests. ",
+      "description": "Expands the newest selection to include the entire word on which\nthe cursors rests.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Selection#instance-expandOverWord",
       "type": "method"
     },
@@ -4804,7 +4822,7 @@
       "name": "fold",
       "text": "fold()",
       "snippet": null,
-      "description": "Creates a fold containing the current selection. ",
+      "description": "Creates a fold containing the current selection.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Selection#instance-fold",
       "type": "method"
     },
@@ -4848,7 +4866,7 @@
       "name": "indentSelectedRows",
       "text": "indentSelectedRows()",
       "snippet": null,
-      "description": "If the selection spans multiple rows, indent all of them. ",
+      "description": "If the selection spans multiple rows, indent all of them.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Selection#instance-indentSelectedRows",
       "type": "method"
     },
@@ -4882,7 +4900,7 @@
       "name": "isEmpty",
       "text": "isEmpty()",
       "snippet": null,
-      "description": "Determines if the selection contains anything. ",
+      "description": "Determines if the selection contains anything.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Selection#instance-isEmpty",
       "type": "method"
     },
@@ -4941,7 +4959,7 @@
       "name": "outdentSelectedRows",
       "text": "outdentSelectedRows()",
       "snippet": null,
-      "description": "Removes one level of indent from the currently selected rows. ",
+      "description": "Removes one level of indent from the currently selected rows.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Selection#instance-outdentSelectedRows",
       "type": "method"
     },
@@ -4949,7 +4967,7 @@
       "name": "selectAll",
       "text": "selectAll()",
       "snippet": null,
-      "description": "Selects all the text in the buffer. ",
+      "description": "Selects all the text in the buffer.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Selection#instance-selectAll",
       "type": "method"
     },
@@ -4989,7 +5007,7 @@
       "name": "selectToBeginningOfLine",
       "text": "selectToBeginningOfLine()",
       "snippet": null,
-      "description": "Selects all the text from the current cursor position to the\nbeginning of the line. ",
+      "description": "Selects all the text from the current cursor position to the\nbeginning of the line.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Selection#instance-selectToBeginningOfLine",
       "type": "method"
     },
@@ -4997,7 +5015,7 @@
       "name": "selectToBeginningOfNextParagraph",
       "text": "selectToBeginningOfNextParagraph()",
       "snippet": null,
-      "description": "Selects all the text from the current cursor position to the\nbeginning of the next paragraph. ",
+      "description": "Selects all the text from the current cursor position to the\nbeginning of the next paragraph.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Selection#instance-selectToBeginningOfNextParagraph",
       "type": "method"
     },
@@ -5005,7 +5023,7 @@
       "name": "selectToBeginningOfNextWord",
       "text": "selectToBeginningOfNextWord()",
       "snippet": null,
-      "description": "Selects all the text from the current cursor position to the\nbeginning of the next word. ",
+      "description": "Selects all the text from the current cursor position to the\nbeginning of the next word.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Selection#instance-selectToBeginningOfNextWord",
       "type": "method"
     },
@@ -5013,7 +5031,7 @@
       "name": "selectToBeginningOfPreviousParagraph",
       "text": "selectToBeginningOfPreviousParagraph()",
       "snippet": null,
-      "description": "Selects all the text from the current cursor position to the\nbeginning of the previous paragraph. ",
+      "description": "Selects all the text from the current cursor position to the\nbeginning of the previous paragraph.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Selection#instance-selectToBeginningOfPreviousParagraph",
       "type": "method"
     },
@@ -5021,7 +5039,7 @@
       "name": "selectToBeginningOfWord",
       "text": "selectToBeginningOfWord()",
       "snippet": null,
-      "description": "Selects all the text from the current cursor position to the\nbeginning of the word. ",
+      "description": "Selects all the text from the current cursor position to the\nbeginning of the word.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Selection#instance-selectToBeginningOfWord",
       "type": "method"
     },
@@ -5029,7 +5047,7 @@
       "name": "selectToBottom",
       "text": "selectToBottom()",
       "snippet": null,
-      "description": "Selects all the text from the current cursor position to the bottom\nof the buffer. ",
+      "description": "Selects all the text from the current cursor position to the bottom\nof the buffer.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Selection#instance-selectToBottom",
       "type": "method"
     },
@@ -5045,7 +5063,7 @@
       "name": "selectToEndOfBufferLine",
       "text": "selectToEndOfBufferLine()",
       "snippet": null,
-      "description": "Selects all the text from the current cursor position to the end of\nthe buffer line. ",
+      "description": "Selects all the text from the current cursor position to the end of\nthe buffer line.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Selection#instance-selectToEndOfBufferLine",
       "type": "method"
     },
@@ -5053,7 +5071,7 @@
       "name": "selectToEndOfLine",
       "text": "selectToEndOfLine()",
       "snippet": null,
-      "description": "Selects all the text from the current cursor position to the end of\nthe screen line. ",
+      "description": "Selects all the text from the current cursor position to the end of\nthe screen line.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Selection#instance-selectToEndOfLine",
       "type": "method"
     },
@@ -5061,7 +5079,7 @@
       "name": "selectToEndOfWord",
       "text": "selectToEndOfWord()",
       "snippet": null,
-      "description": "Selects all the text from the current cursor position to the end of\nthe word. ",
+      "description": "Selects all the text from the current cursor position to the end of\nthe word.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Selection#instance-selectToEndOfWord",
       "type": "method"
     },
@@ -5069,7 +5087,7 @@
       "name": "selectToFirstCharacterOfLine",
       "text": "selectToFirstCharacterOfLine()",
       "snippet": null,
-      "description": "Selects all the text from the current cursor position to the first\ncharacter of the line. ",
+      "description": "Selects all the text from the current cursor position to the first\ncharacter of the line.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Selection#instance-selectToFirstCharacterOfLine",
       "type": "method"
     },
@@ -5077,7 +5095,7 @@
       "name": "selectToNextSubwordBoundary",
       "text": "selectToNextSubwordBoundary()",
       "snippet": null,
-      "description": "Selects text to the next subword boundary. ",
+      "description": "Selects text to the next subword boundary.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Selection#instance-selectToNextSubwordBoundary",
       "type": "method"
     },
@@ -5085,7 +5103,7 @@
       "name": "selectToNextWordBoundary",
       "text": "selectToNextWordBoundary()",
       "snippet": null,
-      "description": "Selects text to the next word boundary. ",
+      "description": "Selects text to the next word boundary.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Selection#instance-selectToNextWordBoundary",
       "type": "method"
     },
@@ -5093,7 +5111,7 @@
       "name": "selectToPreviousSubwordBoundary",
       "text": "selectToPreviousSubwordBoundary()",
       "snippet": null,
-      "description": "Selects text to the previous subword boundary. ",
+      "description": "Selects text to the previous subword boundary.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Selection#instance-selectToPreviousSubwordBoundary",
       "type": "method"
     },
@@ -5101,7 +5119,7 @@
       "name": "selectToPreviousWordBoundary",
       "text": "selectToPreviousWordBoundary()",
       "snippet": null,
-      "description": "Selects text to the previous word boundary. ",
+      "description": "Selects text to the previous word boundary.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Selection#instance-selectToPreviousWordBoundary",
       "type": "method"
     },
@@ -5117,7 +5135,7 @@
       "name": "selectToTop",
       "text": "selectToTop()",
       "snippet": null,
-      "description": "Selects all the text from the current cursor position to the top of\nthe buffer. ",
+      "description": "Selects all the text from the current cursor position to the top of\nthe buffer.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Selection#instance-selectToTop",
       "type": "method"
     },
@@ -5327,7 +5345,7 @@
       "name": "clearUndoStack",
       "text": "clearUndoStack()",
       "snippet": null,
-      "description": "Clear the undo stack. When calling this method within a transaction,\nthe {::onDidChangeText} event will not be triggered because the information\ndescribing the changes is lost. ",
+      "description": "Clear the undo stack. ",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/TextBuffer#instance-clearUndoStack",
       "type": "method"
     },
@@ -5712,7 +5730,7 @@
       "name": "onDidChange",
       "text": null,
       "snippet": "onDidChange(${1:callback})",
-      "description": "Invoke the given callback synchronously when the content of the\nbuffer changes. **You should probably not be using this in packages**.",
+      "description": "Invoke the given callback synchronously when a transaction finishes\nwith a list of all the changes in the transaction.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/TextBuffer#instance-onDidChange",
       "leftLabel": "Disposable",
       "type": "method"
@@ -5746,11 +5764,10 @@
     },
     {
       "name": "onDidChangeText",
-      "text": null,
-      "snippet": "onDidChangeText(${1:callback})",
-      "description": "Invoke the given callback synchronously when a transaction finishes\nwith a list of all the changes in the transaction.",
+      "text": "onDidChangeText()",
+      "snippet": null,
+      "description": "This is now identical to {onDidChange}. ",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/TextBuffer#instance-onDidChangeText",
-      "leftLabel": "Disposable",
       "type": "method"
     },
     {
@@ -6021,7 +6038,7 @@
       "name": "abortTransaction",
       "text": "abortTransaction()",
       "snippet": null,
-      "description": "Abort an open transaction, undoing any operations performed so far\nwithin the transaction. ",
+      "description": "Abort an open transaction, undoing any operations performed so far\nwithin the transaction.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/TextEditor#instance-abortTransaction",
       "type": "method"
     },
@@ -6082,7 +6099,7 @@
       "name": "autoIndentSelectedRows",
       "text": "autoIndentSelectedRows()",
       "snippet": null,
-      "description": "Indent rows intersecting selections based on the grammar's suggested\nindent level. ",
+      "description": "Indent rows intersecting selections based on the grammar's suggested\nindent level.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/TextEditor#instance-autoIndentSelectedRows",
       "type": "method"
     },
@@ -6090,7 +6107,7 @@
       "name": "backspace",
       "text": "backspace()",
       "snippet": null,
-      "description": "For each selection, if the selection is empty, delete the character\npreceding the cursor. Otherwise delete the selected text. ",
+      "description": "For each selection, if the selection is empty, delete the character\npreceding the cursor. Otherwise delete the selected text.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/TextEditor#instance-backspace",
       "type": "method"
     },
@@ -6169,7 +6186,7 @@
       "name": "copySelectedText",
       "text": "copySelectedText()",
       "snippet": null,
-      "description": "For each selection, copy the selected text. ",
+      "description": "For each selection, copy the selected text.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/TextEditor#instance-copySelectedText",
       "type": "method"
     },
@@ -6186,7 +6203,7 @@
       "name": "cutSelectedText",
       "text": "cutSelectedText()",
       "snippet": null,
-      "description": "For each selection, cut the selected text. ",
+      "description": "For each selection, cut the selected text.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/TextEditor#instance-cutSelectedText",
       "type": "method"
     },
@@ -6194,7 +6211,7 @@
       "name": "cutToEndOfBufferLine",
       "text": "cutToEndOfBufferLine()",
       "snippet": null,
-      "description": "For each selection, if the selection is empty, cut all characters\nof the containing buffer line following the cursor. Otherwise cut the\nselected text. ",
+      "description": "For each selection, if the selection is empty, cut all characters\nof the containing buffer line following the cursor. Otherwise cut the\nselected text.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/TextEditor#instance-cutToEndOfBufferLine",
       "type": "method"
     },
@@ -6202,7 +6219,7 @@
       "name": "cutToEndOfLine",
       "text": "cutToEndOfLine()",
       "snippet": null,
-      "description": "For each selection, if the selection is empty, cut all characters\nof the containing screen line following the cursor. Otherwise cut the selected\ntext. ",
+      "description": "For each selection, if the selection is empty, cut all characters\nof the containing screen line following the cursor. Otherwise cut the selected\ntext.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/TextEditor#instance-cutToEndOfLine",
       "type": "method"
     },
@@ -6228,7 +6245,7 @@
       "name": "delete",
       "text": "delete()",
       "snippet": null,
-      "description": "For each selection, if the selection is empty, delete the character\nfollowing the cursor. Otherwise delete the selected text. ",
+      "description": "For each selection, if the selection is empty, delete the character\nfollowing the cursor. Otherwise delete the selected text.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/TextEditor#instance-delete",
       "type": "method"
     },
@@ -6236,7 +6253,7 @@
       "name": "deleteLine",
       "text": "deleteLine()",
       "snippet": null,
-      "description": "Delete all lines intersecting selections. ",
+      "description": "Delete all lines intersecting selections.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/TextEditor#instance-deleteLine",
       "type": "method"
     },
@@ -6244,7 +6261,7 @@
       "name": "deleteToBeginningOfLine",
       "text": "deleteToBeginningOfLine()",
       "snippet": null,
-      "description": "For each selection, if the selection is empty, delete all characters\nof the containing line that precede the cursor. Otherwise delete the\nselected text. ",
+      "description": "For each selection, if the selection is empty, delete all characters\nof the containing line that precede the cursor. Otherwise delete the\nselected text.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/TextEditor#instance-deleteToBeginningOfLine",
       "type": "method"
     },
@@ -6252,7 +6269,7 @@
       "name": "deleteToBeginningOfSubword",
       "text": "deleteToBeginningOfSubword()",
       "snippet": null,
-      "description": "For each selection, if the selection is empty, delete all characters\nof the containing subword following the cursor. Otherwise delete the selected\ntext. ",
+      "description": "For each selection, if the selection is empty, delete all characters\nof the containing subword following the cursor. Otherwise delete the selected\ntext.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/TextEditor#instance-deleteToBeginningOfSubword",
       "type": "method"
     },
@@ -6260,7 +6277,7 @@
       "name": "deleteToBeginningOfWord",
       "text": "deleteToBeginningOfWord()",
       "snippet": null,
-      "description": "For each selection, if the selection is empty, delete all characters\nof the containing word that precede the cursor. Otherwise delete the\nselected text. ",
+      "description": "For each selection, if the selection is empty, delete all characters\nof the containing word that precede the cursor. Otherwise delete the\nselected text.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/TextEditor#instance-deleteToBeginningOfWord",
       "type": "method"
     },
@@ -6268,7 +6285,7 @@
       "name": "deleteToEndOfLine",
       "text": "deleteToEndOfLine()",
       "snippet": null,
-      "description": "For each selection, if the selection is not empty, deletes the\nselection; otherwise, deletes all characters of the containing line\nfollowing the cursor. If the cursor is already at the end of the line,\ndeletes the following newline. ",
+      "description": "For each selection, if the selection is not empty, deletes the\nselection; otherwise, deletes all characters of the containing line\nfollowing the cursor. If the cursor is already at the end of the line,\ndeletes the following newline.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/TextEditor#instance-deleteToEndOfLine",
       "type": "method"
     },
@@ -6276,7 +6293,7 @@
       "name": "deleteToEndOfSubword",
       "text": "deleteToEndOfSubword()",
       "snippet": null,
-      "description": "For each selection, if the selection is empty, delete all characters\nof the containing subword following the cursor. Otherwise delete the selected\ntext. ",
+      "description": "For each selection, if the selection is empty, delete all characters\nof the containing subword following the cursor. Otherwise delete the selected\ntext.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/TextEditor#instance-deleteToEndOfSubword",
       "type": "method"
     },
@@ -6284,7 +6301,7 @@
       "name": "deleteToEndOfWord",
       "text": "deleteToEndOfWord()",
       "snippet": null,
-      "description": "For each selection, if the selection is empty, delete all characters\nof the containing word following the cursor. Otherwise delete the selected\ntext. ",
+      "description": "For each selection, if the selection is empty, delete all characters\nof the containing word following the cursor. Otherwise delete the selected\ntext.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/TextEditor#instance-deleteToEndOfWord",
       "type": "method"
     },
@@ -6292,7 +6309,7 @@
       "name": "deleteToNextWordBoundary",
       "text": "deleteToNextWordBoundary()",
       "snippet": null,
-      "description": "Similar to {::deleteToEndOfWord}, but deletes only up to the\nnext word boundary. ",
+      "description": "Similar to {::deleteToEndOfWord}, but deletes only up to the\nnext word boundary.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/TextEditor#instance-deleteToNextWordBoundary",
       "type": "method"
     },
@@ -6300,7 +6317,7 @@
       "name": "deleteToPreviousWordBoundary",
       "text": "deleteToPreviousWordBoundary()",
       "snippet": null,
-      "description": "Similar to {::deleteToBeginningOfWord}, but deletes only back to the\nprevious word boundary. ",
+      "description": "Similar to {::deleteToBeginningOfWord}, but deletes only back to the\nprevious word boundary.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/TextEditor#instance-deleteToPreviousWordBoundary",
       "type": "method"
     },
@@ -6317,7 +6334,7 @@
       "name": "foldAll",
       "text": "foldAll()",
       "snippet": null,
-      "description": "Fold all foldable lines. ",
+      "description": "Fold all foldable lines.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/TextEditor#instance-foldAll",
       "type": "method"
     },
@@ -6349,7 +6366,7 @@
       "name": "foldSelectedLines",
       "text": "foldSelectedLines()",
       "snippet": null,
-      "description": "For each selection, fold the rows it intersects. ",
+      "description": "For each selection, fold the rows it intersects.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/TextEditor#instance-foldSelectedLines",
       "type": "method"
     },
@@ -6357,7 +6374,7 @@
       "name": "getBuffer",
       "text": "getBuffer()",
       "snippet": null,
-      "description": "Retrieves the current {TextBuffer}. ",
+      "description": "Retrieves the current {TextBuffer}.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/TextEditor#instance-getBuffer",
       "type": "method"
     },
@@ -6419,7 +6436,7 @@
       "name": "getCursors",
       "text": "getCursors()",
       "snippet": null,
-      "description": "Get an Array of all {Cursor}s. ",
+      "description": "Get an Array of all {Cursor}s.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/TextEditor#instance-getCursors",
       "type": "method"
     },
@@ -6463,7 +6480,7 @@
       "name": "getGrammar",
       "text": "getGrammar()",
       "snippet": null,
-      "description": "Get the current {Grammar} of this editor. ",
+      "description": "Get the current {Grammar} of this editor.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/TextEditor#instance-getGrammar",
       "type": "method"
     },
@@ -6587,7 +6604,7 @@
       "name": "getMarkers",
       "text": "getMarkers()",
       "snippet": null,
-      "description": "Get all {DisplayMarker}s on the default marker layer. Consider\nusing {::findMarkers} ",
+      "description": "Get all {DisplayMarker}s on the default marker layer. Consider\nusing {::findMarkers}",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/TextEditor#instance-getMarkers",
       "type": "method"
     },
@@ -6712,7 +6729,7 @@
       "name": "getSoftWrapColumn",
       "text": "getSoftWrapColumn()",
       "snippet": null,
-      "description": "Gets the column at which column will soft wrap ",
+      "description": "Gets the column at which column will soft wrap",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/TextEditor#instance-getSoftWrapColumn",
       "type": "method"
     },
@@ -6810,7 +6827,7 @@
       "name": "indentSelectedRows",
       "text": "indentSelectedRows()",
       "snippet": null,
-      "description": "Indent rows intersecting selections by one level. ",
+      "description": "Indent rows intersecting selections by one level.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/TextEditor#instance-indentSelectedRows",
       "type": "method"
     },
@@ -6827,7 +6844,7 @@
       "name": "insertNewline",
       "text": "insertNewline()",
       "snippet": null,
-      "description": "For each selection, replace the selected text with a newline. ",
+      "description": "For each selection, replace the selected text with a newline.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/TextEditor#instance-insertNewline",
       "type": "method"
     },
@@ -6835,7 +6852,7 @@
       "name": "insertNewlineAbove",
       "text": "insertNewlineAbove()",
       "snippet": null,
-      "description": "For each cursor, insert a newline at the end of the preceding line. ",
+      "description": "For each cursor, insert a newline at the end of the preceding line.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/TextEditor#instance-insertNewlineAbove",
       "type": "method"
     },
@@ -6843,7 +6860,7 @@
       "name": "insertNewlineBelow",
       "text": "insertNewlineBelow()",
       "snippet": null,
-      "description": "For each cursor, insert a newline at beginning the following line. ",
+      "description": "For each cursor, insert a newline at beginning the following line.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/TextEditor#instance-insertNewlineBelow",
       "type": "method"
     },
@@ -6860,7 +6877,7 @@
       "name": "isBufferRowCommented",
       "text": "isBufferRowCommented()",
       "snippet": null,
-      "description": "Determine if the given row is entirely a comment ",
+      "description": "Determine if the given row is entirely a comment",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/TextEditor#instance-isBufferRowCommented",
       "type": "method"
     },
@@ -7026,7 +7043,7 @@
       "name": "moveToBeginningOfLine",
       "text": "moveToBeginningOfLine()",
       "snippet": null,
-      "description": "Move every cursor to the beginning of its line in buffer coordinates. ",
+      "description": "Move every cursor to the beginning of its line in buffer coordinates.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/TextEditor#instance-moveToBeginningOfLine",
       "type": "method"
     },
@@ -7034,7 +7051,7 @@
       "name": "moveToBeginningOfNextParagraph",
       "text": "moveToBeginningOfNextParagraph()",
       "snippet": null,
-      "description": "Move every cursor to the beginning of the next paragraph. ",
+      "description": "Move every cursor to the beginning of the next paragraph.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/TextEditor#instance-moveToBeginningOfNextParagraph",
       "type": "method"
     },
@@ -7042,7 +7059,7 @@
       "name": "moveToBeginningOfNextWord",
       "text": "moveToBeginningOfNextWord()",
       "snippet": null,
-      "description": "Move every cursor to the beginning of the next word. ",
+      "description": "Move every cursor to the beginning of the next word.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/TextEditor#instance-moveToBeginningOfNextWord",
       "type": "method"
     },
@@ -7050,7 +7067,7 @@
       "name": "moveToBeginningOfPreviousParagraph",
       "text": "moveToBeginningOfPreviousParagraph()",
       "snippet": null,
-      "description": "Move every cursor to the beginning of the previous paragraph. ",
+      "description": "Move every cursor to the beginning of the previous paragraph.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/TextEditor#instance-moveToBeginningOfPreviousParagraph",
       "type": "method"
     },
@@ -7058,7 +7075,7 @@
       "name": "moveToBeginningOfScreenLine",
       "text": "moveToBeginningOfScreenLine()",
       "snippet": null,
-      "description": "Move every cursor to the beginning of its line in screen coordinates. ",
+      "description": "Move every cursor to the beginning of its line in screen coordinates.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/TextEditor#instance-moveToBeginningOfScreenLine",
       "type": "method"
     },
@@ -7066,7 +7083,7 @@
       "name": "moveToBeginningOfWord",
       "text": "moveToBeginningOfWord()",
       "snippet": null,
-      "description": "Move every cursor to the beginning of its surrounding word. ",
+      "description": "Move every cursor to the beginning of its surrounding word.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/TextEditor#instance-moveToBeginningOfWord",
       "type": "method"
     },
@@ -7082,7 +7099,7 @@
       "name": "moveToEndOfLine",
       "text": "moveToEndOfLine()",
       "snippet": null,
-      "description": "Move every cursor to the end of its line in buffer coordinates. ",
+      "description": "Move every cursor to the end of its line in buffer coordinates.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/TextEditor#instance-moveToEndOfLine",
       "type": "method"
     },
@@ -7090,7 +7107,7 @@
       "name": "moveToEndOfScreenLine",
       "text": "moveToEndOfScreenLine()",
       "snippet": null,
-      "description": "Move every cursor to the end of its line in screen coordinates. ",
+      "description": "Move every cursor to the end of its line in screen coordinates.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/TextEditor#instance-moveToEndOfScreenLine",
       "type": "method"
     },
@@ -7098,7 +7115,7 @@
       "name": "moveToEndOfWord",
       "text": "moveToEndOfWord()",
       "snippet": null,
-      "description": "Move every cursor to the end of its surrounding word. ",
+      "description": "Move every cursor to the end of its surrounding word.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/TextEditor#instance-moveToEndOfWord",
       "type": "method"
     },
@@ -7106,7 +7123,7 @@
       "name": "moveToFirstCharacterOfLine",
       "text": "moveToFirstCharacterOfLine()",
       "snippet": null,
-      "description": "Move every cursor to the first non-whitespace character of its line. ",
+      "description": "Move every cursor to the first non-whitespace character of its line.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/TextEditor#instance-moveToFirstCharacterOfLine",
       "type": "method"
     },
@@ -7114,7 +7131,7 @@
       "name": "moveToNextSubwordBoundary",
       "text": "moveToNextSubwordBoundary()",
       "snippet": null,
-      "description": "Move every cursor to the next subword boundary. ",
+      "description": "Move every cursor to the next subword boundary.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/TextEditor#instance-moveToNextSubwordBoundary",
       "type": "method"
     },
@@ -7122,7 +7139,7 @@
       "name": "moveToNextWordBoundary",
       "text": "moveToNextWordBoundary()",
       "snippet": null,
-      "description": "Move every cursor to the next word boundary. ",
+      "description": "Move every cursor to the next word boundary.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/TextEditor#instance-moveToNextWordBoundary",
       "type": "method"
     },
@@ -7130,7 +7147,7 @@
       "name": "moveToPreviousSubwordBoundary",
       "text": "moveToPreviousSubwordBoundary()",
       "snippet": null,
-      "description": "Move every cursor to the previous subword boundary. ",
+      "description": "Move every cursor to the previous subword boundary.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/TextEditor#instance-moveToPreviousSubwordBoundary",
       "type": "method"
     },
@@ -7138,7 +7155,7 @@
       "name": "moveToPreviousWordBoundary",
       "text": "moveToPreviousWordBoundary()",
       "snippet": null,
-      "description": "Move every cursor to the previous word boundary. ",
+      "description": "Move every cursor to the previous word boundary.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/TextEditor#instance-moveToPreviousWordBoundary",
       "type": "method"
     },
@@ -7431,7 +7448,7 @@
       "name": "outdentSelectedRows",
       "text": "outdentSelectedRows()",
       "snippet": null,
-      "description": "Outdent rows intersecting selections by one level. ",
+      "description": "Outdent rows intersecting selections by one level.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/TextEditor#instance-outdentSelectedRows",
       "type": "method"
     },
@@ -7447,7 +7464,7 @@
       "name": "redo",
       "text": "redo()",
       "snippet": null,
-      "description": "Redo the last change. ",
+      "description": "Redo the last change.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/TextEditor#instance-redo",
       "type": "method"
     },
@@ -7732,7 +7749,7 @@
       "name": "selectWordsContainingCursors",
       "text": "selectWordsContainingCursors()",
       "snippet": null,
-      "description": "Select the word surrounding each cursor. ",
+      "description": "Select the word surrounding each cursor.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/TextEditor#instance-selectWordsContainingCursors",
       "type": "method"
     },
@@ -7871,7 +7888,7 @@
       "name": "toggleFoldAtBufferRow",
       "text": "toggleFoldAtBufferRow()",
       "snippet": null,
-      "description": "Fold the given buffer row if it isn't currently folded, and unfold\nit otherwise. ",
+      "description": "Fold the given buffer row if it isn't currently folded, and unfold\nit otherwise.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/TextEditor#instance-toggleFoldAtBufferRow",
       "type": "method"
     },
@@ -7887,7 +7904,7 @@
       "name": "toggleSoftTabs",
       "text": "toggleSoftTabs()",
       "snippet": null,
-      "description": "Toggle soft tabs for this editor ",
+      "description": "Toggle soft tabs for this editor",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/TextEditor#instance-toggleSoftTabs",
       "type": "method"
     },
@@ -7920,7 +7937,7 @@
       "name": "undo",
       "text": "undo()",
       "snippet": null,
-      "description": "Undo the last change. ",
+      "description": "Undo the last change.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/TextEditor#instance-undo",
       "type": "method"
     },
@@ -7928,7 +7945,7 @@
       "name": "unfoldAll",
       "text": "unfoldAll()",
       "snippet": null,
-      "description": "Unfold all existing folds. ",
+      "description": "Unfold all existing folds.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/TextEditor#instance-unfoldAll",
       "type": "method"
     },
@@ -7944,7 +7961,7 @@
       "name": "unfoldCurrentRow",
       "text": "unfoldCurrentRow()",
       "snippet": null,
-      "description": "Unfold the most recent cursor's row by one level. ",
+      "description": "Unfold the most recent cursor's row by one level.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/TextEditor#instance-unfoldCurrentRow",
       "type": "method"
     },
@@ -8325,7 +8342,7 @@
       "snippet": "hide(${1:itemOrURI})",
       "description": "Search the workspace for items matching the given URI and hide them.",
       "descriptionMoreURL": "https://atom.io/docs/api/latest/Workspace#instance-hide",
-      "leftLabel": "boolean",
+      "leftLabel": "Boolean",
       "type": "method"
     },
     {
